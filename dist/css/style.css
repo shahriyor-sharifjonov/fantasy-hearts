@@ -267,12 +267,12 @@
 }
 
 .header__logout:hover {
-  background: #fff;
-  color: #24B09C;
+  background: #FFC93D;
+  color: #050505;
 }
 
 .header__logout:hover svg {
-  stroke: #24B09C;
+  stroke: #050505;
 }
 
 .header__logout svg {
