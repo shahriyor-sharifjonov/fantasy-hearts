@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    font-family: sans-serif;
+    font-family: 'Nunito', sans-serif;
     &:focus,
     &:active{
         outline: none;
@@ -13,6 +13,11 @@
 html,
 body{
     height: 100%;
+}
+body.o-hidden{
+    @include media(1200){
+        overflow-y: hidden;
+    }
 }
 .wrapper{
     min-height: 100%;
@@ -26,4 +31,15 @@ button{
     background: none;
     border: none;
     cursor: pointer;
+    color: inherit;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.heighttwohunderedvh{
+    height: 200vh;
 }
