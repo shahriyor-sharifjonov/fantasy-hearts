@@ -55,7 +55,63 @@ const headerMenu = () => {
   };
 }
 
+const generateStars = () => {
+  const showcase = document.querySelector('.leaderboard__showcase');
+
+  const getRandomNumber = (max = 100, min = 0) => Math.floor(Math.random() * (max - min + 1) + min)
+  
+  const starCreator = () => {
+    const starSize = getRandomNumber(10, 3) + "px";
+    const starTop = getRandomNumber() + "%";
+    const starLeft = getRandomNumber() + "%";
+    const starDuration = getRandomNumber(10000, 3000) + "ms";
+    const star = document.createElement("span");
+    star.classList.add("star");
+    star.style.height = starSize;
+    star.style.width = starSize;
+    star.style.top = starTop;
+    star.style.left = starLeft;
+    star.style.animationDuration = starDuration;
+    showcase.insertAdjacentElement("beforeend", star);
+  };
+
+  const min = Math.round(window.innerWidth / 100)
+  const max = Math.round(window.innerWidth / 50)
+
+  const starNum = getRandomNumber(max, min);
+
+  for (let i = 0; i < starNum; i++) {
+    starCreator();
+  }
+}
+
+const generateFlyingStars = () => {
+  const showcase = document.querySelector('.leaderboard__showcase');
+
+  const getRandomNumber = (max = 100, min = 0) => Math.floor(Math.random() * (max - min + 1) + min)
+  
+  const starCreator = () => {
+    const starTop = getRandomNumber() + "%";
+    const starLeft = getRandomNumber() + "%";
+    const starDuration = getRandomNumber(10000, 3000) + "ms";
+    const star = document.createElement("span");
+    star.classList.add("flying-star");
+    star.style.top = starTop;
+    star.style.left = starLeft;
+    star.style.animationDuration = starDuration;
+    showcase.insertAdjacentElement("beforeend", star);
+  };
+
+  const starNum = getRandomNumber(6, 2);
+
+  for (let i = 0; i < starNum; i++) {
+    starCreator();
+  }
+}
+
 window.onload = () => {
   getHeader();
   headerMenu();
+  generateStars();
+  generateFlyingStars();
 }
