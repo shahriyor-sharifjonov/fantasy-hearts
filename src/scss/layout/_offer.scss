@@ -1,0 +1,95 @@
+.offer{
+    background: linear-gradient(103.29deg, #FFC83D 24.09%, #FFF73D 81.4%);
+    padding: 73px 0;
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media(992){
+            flex-direction: column-reverse;
+            align-items: center;
+            row-gap: 16px;
+        }
+    }
+    &__content{
+        @include media(992){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &__title{
+        font-family: 'Jura';
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: -0.02em;
+        color: #050505;
+        margin-bottom: 24px;
+        @include media(992){
+            text-align: center;
+        }
+        @include media(576){
+            font-size: 24px;
+            line-height: 26px;
+            margin-bottom: 12px;
+        }
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 36px;
+        color: #050505;
+        @include media(992){
+            text-align: center;
+        }
+        @include media(576){
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 24px;
+        }
+    }
+    &__button{
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 15px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        font-family: 'Jura';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: #050505;
+        column-gap: 12px;
+        transition: 300ms ease-out;
+        @include media(992){
+            max-width: 336px;
+            width: 100%;
+        }
+        svg{
+            transition: 300ms ease-out;
+            stroke: #050505;
+        }
+        &:hover{
+            background: #0E322F;
+            color: #fff;
+            svg{
+                stroke: #fff;
+            }
+        }
+    }
+    &__img{
+        max-width: 100%;
+        @include media(576){
+            width: 270px;
+        }
+        img{
+            max-width: 100%;
+            mix-blend-mode: multiply;
+        }
+    }
+}

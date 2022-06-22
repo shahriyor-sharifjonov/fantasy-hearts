@@ -110,11 +110,11 @@
                 width: 100%;
             }
             &:hover{
-                background: #fff;
-                color: #24B09C;
-                border-color: #24B09C;
+                background: transparent;
+                color: #fff;
+                border-color: #fff;
                 svg{
-                    stroke: #24B09C;
+                    stroke: #fff;
                     transition: 300ms ease-out;
                 }
             }
@@ -134,7 +134,7 @@
             color: #FFFFFF;
             transition: 300ms ease-out;
             &:hover{
-                color: #24B09C;
+                color: #FFC93D;
             }
         }
     }

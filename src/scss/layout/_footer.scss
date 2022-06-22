@@ -68,6 +68,11 @@
         line-height: 24px;
         color: #FFFFFF;
         transition: 300ms ease-out;
+        @include media(992){
+            max-width: 336px;
+            width: 100%;
+            justify-content: center;
+        }
         &:hover{
             svg{
                 transform: translateX(5px);
