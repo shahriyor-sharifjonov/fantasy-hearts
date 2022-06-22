@@ -339,7 +339,7 @@
 }
 
 .no-webp .intro {
-  background: url("../../img/intro-background.png") center/cover no-repeat; }
+  background: url("../img/intro-background.png") center/cover no-repeat; }
 
 .intro {
   height: 100vh;
@@ -583,4 +583,4 @@ a {
   }
 }
 
-.webp .intro { background: url(../../img/intro-background.webp) center/cover no-repeat; }
+.webp .intro { background: url(../img/intro-background.webp) center/cover no-repeat; }
