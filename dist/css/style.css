@@ -1539,6 +1539,56 @@
   color: #0E322F;
 }
 
+.faq__body {
+  padding: 100px 15px;
+}
+
+.faq__title {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -0.02em;
+  color: #0E322F;
+  margin-bottom: 48px;
+}
+
+.faq .accordion {
+  background: #EFEFEF;
+  border-radius: 16px;
+}
+
+.faq .accordion:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.faq .accordion__button {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  padding: 16px 24px;
+  background: #FFFFFF;
+  border: 1px solid #C0C0C0;
+  border-radius: 16px;
+  letter-spacing: -0.02em;
+  color: #0E322F;
+}
+
+.faq .accordion__content {
+  display: none;
+  padding: 32px 24px 40px 24px;
+}
+
+.faq .accordion__content p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #0E322F;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -2355,6 +2405,26 @@ a {
   }
 
   .how__item-p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .faq__body {
+    padding: 64px 15px;
+  }
+
+  .faq__title {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
+
+  .faq .accordion__button {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .faq .accordion__content p {
     font-size: 14px;
     line-height: 20px;
   }
