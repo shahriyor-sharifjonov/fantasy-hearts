@@ -1547,7 +1547,7 @@
   -webkit-tap-highlight-color: transparent;
   font-family: "Nunito", sans-serif;
   scroll-behavior: smooth;
-  scroll-margin: 86px;
+  scroll-margin: 85px;
 }
 
 *:focus,
@@ -2360,7 +2360,7 @@ a {
   }
 
   * {
-    scroll-margin: 48px;
+    scroll-margin: 47px;
   }
 }
 
