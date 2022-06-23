@@ -1155,6 +1155,10 @@
   width: 100%;
 }
 
+.about__video {
+  min-width: 580px;
+}
+
 .about__video-content {
   position: relative;
   line-height: 0;
@@ -1358,6 +1362,10 @@ a {
             column-gap: 24px;
   }
 
+  .about__video {
+    min-width: 445px;
+  }
+
   .about__video-button {
     width: 56px;
     height: 56px;
@@ -1499,6 +1507,10 @@ a {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .about__video {
+    min-width: 0;
   }
 
   body.o-hidden {

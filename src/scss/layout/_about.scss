@@ -121,6 +121,13 @@
         }
     }
     &__video{
+        min-width: 580px;
+        @include media(1400){
+            min-width: 445px;
+        }
+        @include media(1200){
+            min-width: 0;
+        }
         &-content{
             position: relative;
             line-height: 0;
