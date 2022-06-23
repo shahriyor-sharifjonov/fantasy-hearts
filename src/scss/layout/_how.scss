@@ -1,0 +1,204 @@
+.how{
+    &__body{
+        padding: 100px 15px;
+        @include media(576){
+            padding: 64px 15px;
+        }
+    }
+    &__title{
+        font-family: 'Jura';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: -0.02em;
+        color: #0E322F;
+        @include media(992){
+            text-align: center;
+        }
+        @include media(576){
+            font-size: 24px;
+            line-height: 26px;
+        }
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        column-gap: 200px;
+        @include media(992){
+            flex-direction: column;
+            align-items: center;
+            row-gap: 24px;
+        }
+        &s{
+            position: relative;
+        }
+        &-seperator{
+            position: absolute;
+            top: 180px;
+            left: 32px;
+            @include media(1400){
+                width: 460px;
+                top: 160px;
+            }
+            @include media(1200){
+                top: 150px;
+            }
+            @include media(992){
+                display: none;
+            }
+            svg{
+                width: 100%;
+            }
+        }
+        &-img{
+            @include media(576){
+                max-width: 210px;
+                width: 100%;
+                img{
+                    max-width: 100%;
+                }
+            }
+        }
+        &-content{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            column-gap: 40px;
+            @include media(992){
+                flex-direction: column;
+                align-items: center;
+                row-gap: 12px;
+            }
+        }
+        &-num{
+            min-width: 64px;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #D5EAE7;
+            font-family: 'Jura';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 52px;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: #0E322F;            
+            @include media(576){
+                min-width: 48px;
+                width: 48px;
+                height: 48px;
+                font-size: 28px;
+                line-height: 28px;
+            }
+        }
+        &-p{
+            max-width: 580px;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            color: #0E322F;
+            @include media(992){
+                text-align: center;
+            }
+            @include media(576){
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+        &_1{
+            margin-top: -18px;
+            margin-bottom: 95px;
+            justify-content: flex-start;
+            @include media(1400){
+                margin-bottom: 50px;
+            }
+            @include media(992){
+                margin-top: 32px;
+            }
+            @include media(576){
+                margin-bottom: 32px;
+            }
+        }
+        &_2{
+            justify-content: flex-end;
+            @include media(992){
+                flex-direction: column-reverse;
+            }
+        }
+    }
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        gap: 32px 35px;
+        flex-wrap: wrap;
+        margin-top: 64px;
+        padding-top: 64px;
+        border-top: 1px solid #0E322F20;
+        @include media(1400){
+            flex-direction: column;
+        }
+    }
+    &__item{
+        max-width: 390px;
+        @include media(1400){
+            max-width: 100%;
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            column-gap: 16px;
+        }
+        @include media(992){
+            flex-direction: column;
+        }
+        &-img{
+            overflow: hidden;
+            line-height: 0;
+            margin-bottom: 16px;
+            max-width: 100%;
+            @include media(1400){
+                min-width: 390px;
+            }
+            @include media(992){
+                min-width: 0;
+            }
+            img{
+                max-width: 100%;
+                border: 1px solid rgba(14, 50, 47, 0.2);
+                border-radius: 12px;
+            }
+        }
+        &-title{
+            font-family: 'Jura';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 32px;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            color: #0E322F;
+            @include media(576){
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 12px;
+            }
+        }
+        &-p{
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 28px;
+            color: #0E322F;
+            @include media(576){
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}
