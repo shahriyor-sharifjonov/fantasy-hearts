@@ -1231,6 +1231,160 @@
   width: 100%;
 }
 
+.whom {
+  position: relative;
+  background: #F4F4F4;
+}
+
+.whom__body {
+  padding: 100px 15px;
+}
+
+.whom__content {
+  width: 50%;
+}
+
+.no-webp .whom__img.lg {
+  background-image: url("../img/whom-img.png"); }
+
+.whom__img.lg {
+  position: absolute;
+  line-height: 0;
+  top: 0;
+  right: 0;
+  width: calc(50% - 56px);
+  height: 100%;
+  background-attachment: fixed;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.whom__img.sm {
+  display: none;
+}
+
+.whom__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.whom__title {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+  color: #1D1D1D;
+}
+
+.whom__desc {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 40px;
+  color: #1D1D1D;
+}
+
+.whom__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 24px;
+  margin-bottom: 40px;
+}
+
+.whom__li {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 12px;
+     -moz-column-gap: 12px;
+          column-gap: 12px;
+  justify-content: flex-start;
+  letter-spacing: -0.02em;
+  color: #1D1D1D;
+}
+
+.whom__li svg {
+  width: 32px;
+  min-width: 32px;
+}
+
+.whom__button {
+  background: #FFC93D;
+  -webkit-box-shadow: 0px 8px 16px rgba(255, 201, 61, 0.02);
+          box-shadow: 0px 8px 16px rgba(255, 201, 61, 0.02);
+  border-radius: 12px;
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #050505;
+  padding: 15px 28px;
+  -webkit-column-gap: 12px;
+     -moz-column-gap: 12px;
+          column-gap: 12px;
+  -webkit-transition: 300ms ease-out;
+  -o-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.whom__button:hover {
+  background: #0E322F;
+  color: #fff;
+}
+
+.whom__button:hover svg {
+  stroke: #fff;
+}
+
+.whom__button svg {
+  stroke: #050505;
+}
+
+.whom__button svg * {
+  -webkit-transition: 300ms ease-out;
+  -o-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1511,6 +1665,39 @@ a {
 
   .about__video {
     min-width: 0;
+  }
+
+  .whom__content {
+    width: 100%;
+  }
+
+  .whom__img.lg {
+    display: none;
+  }
+
+  .whom__img.sm {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: 16px;
+    position: relative;
+    padding-bottom: 56%;
+  }
+
+  .whom__img.sm img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .whom__title {
+    max-width: 690px;
   }
 
   body.o-hidden {
@@ -1845,6 +2032,36 @@ a {
     width: 100%;
   }
 
+  .whom__body {
+    padding: 64px 15px;
+  }
+
+  .whom__title {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+
+  .whom__desc {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 24px;
+  }
+
+  .whom__li {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .whom__li p {
+    margin-top: 4px;
+  }
+
+  .whom__button {
+    max-width: 336px;
+    width: 100%;
+  }
+
   * {
     scroll-margin: 48px;
   }
@@ -1857,3 +2074,5 @@ a {
 .webp .leaderboard__content { background: url(../img/leaderboard-background.webp) top/cover no-repeat; }
 
 .webp .about { background: url(../img/about-background.webp) center/cover no-repeat; }
+
+.webp .whom__img.lg { background-image: url(../img/whom-img.webp); }
