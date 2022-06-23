@@ -1575,6 +1575,44 @@
   border-radius: 16px;
   letter-spacing: -0.02em;
   color: #0E322F;
+  cursor: pointer;
+  position: relative;
+}
+
+.faq .accordion__button.active::after {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.faq .accordion__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #0E322F;
+  width: 28px;
+  height: 2px;
+}
+
+.faq .accordion__button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 37px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #0E322F;
+  width: 2px;
+  height: 28px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: 300ms ease-out;
+  -o-transition: 300ms ease-out;
+  transition: 300ms ease-out;
 }
 
 .faq .accordion__content {
