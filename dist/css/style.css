@@ -1061,6 +1061,172 @@
   }
 }
 
+.no-webp .about {
+  background: url("../img/about-background.png") center/cover no-repeat; }
+
+.about {
+  width: 100%;
+}
+
+.about__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 80px;
+  padding: 100px 15px;
+}
+
+.about__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 80px;
+     -moz-column-gap: 80px;
+          column-gap: 80px;
+}
+
+.about__content {
+  width: 100%;
+}
+
+.about__title {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: 24px;
+  letter-spacing: -0.05em;
+  color: #0E322F;
+}
+
+.about__desc {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 48px;
+  color: #0E322F;
+}
+
+.about__p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0E322F;
+}
+
+.about__slider {
+  margin-bottom: 16px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.about__slider .swiper {
+  width: 100%;
+}
+
+.about__slider .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.about__slider-item {
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 0;
+  width: 185px;
+}
+
+.about__slider-item img {
+  width: 100%;
+}
+
+.about__video-content {
+  position: relative;
+  line-height: 0;
+  margin-bottom: 24px;
+}
+
+.about__video-img {
+  width: 100%;
+  height: 100%;
+  line-height: 0;
+  border-radius: 12px;
+}
+
+.about__video-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.about__video-button img {
+  width: 100%;
+}
+
+.about__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 260px;
+  row-gap: 24px;
+}
+
+.about__item-img {
+  max-width: 100%;
+  line-height: 0;
+}
+
+.about__item-img img {
+  max-width: 100%;
+}
+
+.about__item-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #0E322F;
+  max-width: 260px;
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1083,6 +1249,8 @@ body {
 }
 
 .wrapper {
+  width: 100%;
+  overflow-x: hidden;
   min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1189,6 +1357,15 @@ a {
        -moz-column-gap: 24px;
             column-gap: 24px;
   }
+
+  .about__video-button {
+    width: 56px;
+    height: 56px;
+  }
+
+  .about__item {
+    width: calc(50% - 20px);
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1268,6 +1445,60 @@ a {
 
   .header__button {
     display: block;
+  }
+
+  .about__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 32px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .about__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .about__title {
+    text-align: center;
+  }
+
+  .about__desc {
+    text-align: center;
+    max-width: 536px;
+    width: 100%;
+  }
+
+  .about__p {
+    text-align: center;
+  }
+
+  .about__slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 12px;
+  }
+
+  .about__slider .swiper {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
 
   body.o-hidden {
@@ -1489,6 +1720,22 @@ a {
     font-size: 16px;
     line-height: 28px;
   }
+
+  .about__slider {
+    display: block;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 0;
+  }
+
+  .about__slider .swiper {
+    width: 100%;
+  }
+
+  .about__slider-item {
+    width: 288px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1526,6 +1773,13 @@ a {
     line-height: 36px;
   }
 
+  .footer__button {
+    -webkit-column-gap: 12px;
+       -moz-column-gap: 12px;
+            column-gap: 12px;
+    padding: 15px;
+  }
+
   .intro {
     padding-top: 48px;
   }
@@ -1546,6 +1800,39 @@ a {
     width: 270px;
   }
 
+  .about__body {
+    padding: 48px 15px 64px 15px;
+  }
+
+  .about__title {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+
+  .about__desc {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 24px;
+  }
+
+  .about__p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .about__slider {
+    margin-bottom: 12px;
+  }
+
+  .about__video-content {
+    margin-bottom: 12px;
+  }
+
+  .about__item {
+    width: 100%;
+  }
+
   * {
     scroll-margin: 48px;
   }
@@ -1556,3 +1843,5 @@ a {
 .webp .leaderboard__showcase .flying-star { background: url(../img/flying-star-1.webp) center/cover no-repeat; }
 
 .webp .leaderboard__content { background: url(../img/leaderboard-background.webp) top/cover no-repeat; }
+
+.webp .about { background: url(../img/about-background.webp) center/cover no-repeat; }

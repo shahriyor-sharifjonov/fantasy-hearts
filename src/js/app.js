@@ -2,9 +2,9 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 
-// import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
-// const swiper = new Swiper();
+const swiper = new Swiper();
 
 const getHeader = () => {
     var header = document.getElementById("header");
@@ -109,9 +109,17 @@ const generateFlyingStars = () => {
   }
 }
 
+const initSliders = () => {
+  new Swiper(".about__swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 10,
+  });
+}
+
 window.onload = () => {
   getHeader();
   headerMenu();
   generateStars();
   generateFlyingStars();
+  initSliders();
 }

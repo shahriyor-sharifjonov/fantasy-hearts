@@ -1,0 +1,40 @@
+mixin about()
+    .about#about  
+        .about__body.container 
+            .about__top 
+                .about__content 
+                    h2.about__title Fantasy Hearts
+                    p.about__desc Это новая многопользовательская игра для Android, в которой тактика решает всё.
+                    .about__slider 
+                        .about__swiper.swiper 
+                            .swiper-wrapper 
+                                .about__slider-item.swiper-slide
+                                    img(src="@img/about-slide-1.png", alt="" draggable="false")
+                                .about__slider-item.swiper-slide
+                                    img(src="@img/about-slide-2.png", alt="" draggable="false")
+                                .about__slider-item.swiper-slide
+                                    img(src="@img/about-slide-3.png", alt="" draggable="false")
+                    p.about__p Арены с элементами, влияющими на ход игры
+                .about__video 
+                    .about__video-content 
+                        img(src="@img/about-thumb.png", alt="" draggable="false").about__video-img
+                        a(href="#!").about__video-button
+                            img(src="@img/play.svg", alt="" draggable="false")
+                    p.about__video-title.about__p Геймплей игры, в которую легко влюбиться!
+            .about__row 
+                .about__item 
+                    .about__item-img 
+                        img(src="@img/about-item-1.png", alt="" draggable="false")
+                    p.about__item-title Собери#[br]свой отряд
+                .about__item 
+                    .about__item-img 
+                        img(src="@img/about-item-2.png", alt="" draggable="false")
+                    p.about__item-title Совершай эффективные ходы
+                .about__item 
+                    .about__item-img 
+                        img(src="@img/about-item-3.png", alt="" draggable="false")
+                    p.about__item-title Используй синергию юнитов
+                .about__item 
+                    .about__item-img 
+                        img(src="@img/about-item-4.png", alt="" draggable="false")
+                    p.about__item-title Возглавь таблицу лидеров
