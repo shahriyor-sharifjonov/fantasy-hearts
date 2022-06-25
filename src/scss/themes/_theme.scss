@@ -47,6 +47,71 @@ a{
     color: inherit;
     text-decoration: none;
 }
-.heighttwohunderedvh{
-    height: 200vh;
+.theme{
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    @include media(1200){
+        flex-direction: column;
+    }
+    &__header{
+        background: #0E322F;
+        padding: 8px;
+        height: 48px;
+        width: 100%;
+        display: none;
+        @include media(1200){
+            display: flex;
+        }
+        &-logo{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            column-gap: 4px;
+            &-img{
+                width: 32px;
+                height: 32px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            span{
+                font-family: 'Jura';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 12px;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+            }
+        }
+    }
+    &__link{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        column-gap: 12px;
+        @include media(1200){
+            display: flex;
+        }
+        span{
+            font-family: 'Jura';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+            color: #0E322F;
+        }
+    }
+    .content{
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 15px 56px 15px;
+    }
 }

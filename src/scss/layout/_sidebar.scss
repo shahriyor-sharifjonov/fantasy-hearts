@@ -1,1 +1,103 @@
-// Сайдбар
+.sidebar{
+    width: 280px;
+    background: #0E322F;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 0 16px 16px;
+    position: relative;
+    isolation: isolate;
+    @include media(1200){
+        display: none;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 20%;
+        left: 0;
+        width: 100%;
+        height: 392px;
+        z-index: -1;
+        background: url('../img/sidebar-background.png') center / cover no-repeat;
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 8px;
+        &-p{
+            font-family: 'Jura';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;                
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0;
+        row-gap: 4px;
+    }
+    &__link{
+        position: relative;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 16px;
+        font-family: 'Jura';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        padding: 16px 24px;
+        transition: 300ms ease-out;
+        border-radius: 12px 0 0 12px;
+        *{
+            opacity: 0.7;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: 40px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #FFC83D;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            transition: 300ms ease-out;
+        }
+        &.notification{
+            &::before{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &.active{
+            background: #1C4643;
+            *{
+                opacity: 1;
+            }
+        }
+        &:not(.active):hover{
+            background: #0F3835;
+            *{
+                opacity: 1;
+            }
+        }
+        svg{
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            transition: 300ms ease-out;
+        }
+    }
+}

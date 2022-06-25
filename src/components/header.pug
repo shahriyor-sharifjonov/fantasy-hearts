@@ -1,0 +1,7 @@
+mixin header(status)
+    if status === 'guest'
+        .theme__header 
+            a(href="#!").theme__header-logo
+                .theme__header-logo-img 
+                    img(src="../@img/logo.png", alt="" draggable="false")
+                span Вход в ЛК

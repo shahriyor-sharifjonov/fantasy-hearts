@@ -4,7 +4,6 @@ import $ from 'jquery';
 
 functions.isWebp();
 
-
 const swiper = new Swiper();
 
 const getHeader = () => {
@@ -137,11 +136,29 @@ const accordion = () => {
   });
 }
 
+const showPassword = () => {
+  const inputs = document.querySelectorAll('.input-password');
+  inputs.forEach(input => {
+    const parent = input.parentElement;
+    const button = parent.querySelector('button');
+    let isHidden = true;
+    button.addEventListener('click', () => {
+      isHidden = !isHidden;
+      isHidden ? input.setAttribute('type', 'password') : input.setAttribute('type', 'text')
+    })
+  })
+}
+
 window.onload = () => {
-  getHeader();
-  headerMenu();
-  generateStars();
-  generateFlyingStars();
-  initSliders();
-  accordion()
+  if(document.querySelector('#home')){
+    getHeader();
+    headerMenu();
+    generateStars();
+    generateFlyingStars();
+    initSliders();
+    accordion();
+  }
+  if(document.querySelector('.input-password')){
+    showPassword();
+  }
 }

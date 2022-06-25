@@ -1,0 +1,102 @@
+doctype html 
+html(lang="en") 
+    head 
+        meta(charset="UTF-8") 
+        meta(http-equiv="X-UA-Compatible", content="IE=edge") 
+        meta(name="viewport", content="width=device-width, initial-scale=1.0") 
+        link(rel="stylesheet", href="../css/style.min.css") 
+        title Регистрация 
+    body 
+        .theme 
+            include ../../components/sidebar.pug 
+            +sidebar('guest')
+            include ../../components/header.pug 
+            +header('guest')
+            .content 
+                .auth   
+                    p.auth__title Регистрация
+                    .auth__p Заполните все данные, чтобы начать зарабатывать деньги
+                    .auth__content 
+                        form(action="#").auth__form 
+                            .auth__step.auth__step_first
+                                p.auth__step-counter 1 из 4 шаг
+                                p.auth__step-title Логин и пароль
+                                p.auth__step-desc Все поля обязательны к заполнению
+                                .auth__step-item
+                                    .auth__step-input
+                                        input(type="text" placeholder="Ваш логин" autocomplete="username").input
+                                        <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                                            <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                                            <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    p.auth__step-success-p Логин не занят
+                                    p.auth__step-error-p Логин занят
+                                    p.auth__step-label до 12 символов
+                                .auth__step-item.two-icons
+                                    .auth__step-input
+                                        input(type="password" placeholder="Пароль" autocomplete="new-password").input.input-password
+                                        button(type="button") 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.4">
+                                                <path d="M14.1223 9.87999C15.2933 11.051 15.2933 12.952 14.1223 14.125C12.9513 15.296 11.0503 15.296 9.87727 14.125C8.70627 12.954 8.70627 11.053 9.87727 9.87999C11.0503 8.70699 12.9503 8.70699 14.1223 9.87999" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 12C3 11.341 3.152 10.689 3.446 10.088V10.088C4.961 6.991 8.309 5 12 5C15.691 5 19.039 6.991 20.554 10.088V10.088C20.848 10.689 21 11.341 21 12C21 12.659 20.848 13.311 20.554 13.912V13.912C19.039 17.009 15.691 19 12 19C8.309 19 4.961 17.009 3.446 13.912V13.912C3.152 13.311 3 12.659 3 12Z" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </g>
+                                            </svg>
+                                        <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                                            <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                                            <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    p.auth__step-error-p Ненадежный пароль
+                                    p.auth__step-success-p Надежный пароль
+                                    p.auth__step-label минимум 6 символов
+                                .auth__step-item.two-icons 
+                                    .auth__step-input 
+                                        input(type="password" placeholder="Повторите пароль" autocomplete="new-password").input.input-password
+                                        button(type="button") 
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.4">
+                                                <path d="M14.1223 9.87999C15.2933 11.051 15.2933 12.952 14.1223 14.125C12.9513 15.296 11.0503 15.296 9.87727 14.125C8.70627 12.954 8.70627 11.053 9.87727 9.87999C11.0503 8.70699 12.9503 8.70699 14.1223 9.87999" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 12C3 11.341 3.152 10.689 3.446 10.088V10.088C4.961 6.991 8.309 5 12 5C15.691 5 19.039 6.991 20.554 10.088V10.088C20.848 10.689 21 11.341 21 12C21 12.659 20.848 13.311 20.554 13.912V13.912C19.039 17.009 15.691 19 12 19C8.309 19 4.961 17.009 3.446 13.912V13.912C3.152 13.311 3 12.659 3 12Z" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </g>
+                                            </svg>
+                                        <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                                            <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                                            <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    p.auth__step-error-p Пароли не совпадають
+                                    p.auth__step-success-p Надежный пароль
+                        .auth__footer 
+                            .auth__footer-left
+                                button(type="button").auth__next Далее
+                                a(href="../index.html").auth__cancel Отменить
+                                button(type="button").auth__prev.inactive Назад
+                            a(href="login.html").auth__button У меня уже есть ЛК
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.163 21L18.607 20.012C19.421 19.832 20 19.11 20 18.277V5.76601C20 4.93301 19.421 4.21101 18.608 4.03101L14.164 3.04301C13.053 2.79601 12 3.64101 12 4.77901V19.265C12 20.402 13.053 21.247 14.163 21V21Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 10.98V12.98" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 16V18.042C4 19.147 4.895 20.042 6 20.042H9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 8V6C4 4.895 4.895 4 6 4H9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 12H9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7 14L9 12L7 10" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                    a(href="#!").theme__link 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16.333 3H4.667C3.746 3 3 3.746 3 4.667V13" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.5 21L15.167 17.667H19.334C20.254 17.667 21 16.92 21 16V7.667C21 6.746 20.254 6 19.333 6H7.667C6.746 6 6 6.746 6 7.667V16C6 16.92 6.746 17.667 7.667 17.667H11" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 10H17" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 14H14" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        span Написать в техподдержку
+        script(src="../js/app.min.js")
