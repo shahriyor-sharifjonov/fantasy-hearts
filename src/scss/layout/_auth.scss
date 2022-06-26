@@ -10,6 +10,9 @@
         line-height: 16px;
         color: #0E322F;
         display: none;
+        &.show{
+            display: flex;
+        }
         @include media(1200){
             display: flex;
         }
@@ -51,6 +54,9 @@
     }
     &__form{
         margin-bottom: 32px;
+        &.pass-recovery{
+            margin-bottom: 0;
+        }
     }
     &__step{
         display: none;
@@ -127,6 +133,13 @@
                 flex-direction: column;
                 align-items: flex-end;
                 row-gap: 4px;
+                &.pass-recovery{
+                    align-items: stretch;
+                    row-gap: 12px;
+                    .auth__step-input{
+                        max-width: 100%;
+                    }
+                }
             }
             &:not(:last-of-type){
                 margin-bottom: 24px;
@@ -189,6 +202,9 @@
             width: 100%;
             @include media(768){
                 max-width: 100%;
+            }
+            &.double{
+                max-width: 346px;
             }
             .input{
                 width: 100%;
