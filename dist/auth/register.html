@@ -4,11 +4,11 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../css/style.min.css?_v=20220625131528"/>
+    <link rel="stylesheet" href="../css/style.min.css?_v=20220626162920"/>
     <title>Регистрация </title>
   </head>
   <body> 
-    <div class="theme"> 
+    <div class="theme" id="register"> 
             <div class="sidebar">
               <div class="sidebar__top"><a class="sidebar__logo" href="#!">
                   <div class="sidebar__logo-img"><picture><source srcset="../img/logo.webp" type="image/webp"><img src="../img/logo.png" alt="" draggable="false"/></picture></div><span class="sidebar__logo-p">Вход в ЛК</span></a>
@@ -24,18 +24,21 @@
             <div class="theme__header"> <a class="theme__header-logo" href="#!">
                 <div class="theme__header-logo-img"> <picture><source srcset="../img/logo.webp" type="image/webp"><img src="../img/logo.png" alt="" draggable="false"/></picture></div><span>Вход в ЛК</span></a></div>
       <div class="content"> 
-        <div class="auth">  
+        <div class="auth">  <a class="auth__back" href="../">
+             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.33268 5.33337L6.66602 8.00004L9.33268 10.6667" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Вернутся на сайт</span></a>
           <p class="auth__title">Регистрация</p>
           <div class="auth__p">Заполните все данные, чтобы начать зарабатывать деньги</div>
           <div class="auth__content"> 
             <form class="auth__form" action="#"> 
-              <div class="auth__step auth__step_first">
+              <div class="auth__step auth__step_1 active">
                 <p class="auth__step-counter">1 из 4 шаг</p>
                 <p class="auth__step-title">Логин и пароль</p>
                 <p class="auth__step-desc">Все поля обязательны к заполнению</p>
                 <div class="auth__step-item">
                   <div class="auth__step-input">
-                    <input class="input" type="text" placeholder="Ваш логин" autocomplete="username"/><svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <input class="input" type="text" placeholder="Ваш логин" autocomplete="username" required="required"/><svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="10" cy="10" r="10" fill="#24B09C"/>
 <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
@@ -50,9 +53,8 @@
                 </div>
                 <div class="auth__step-item two-icons">
                   <div class="auth__step-input">
-                    <input class="input input-password" type="password" placeholder="Пароль" autocomplete="new-password"/>
-                    <button type="button">
-                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <input class="input input-password" type="password" placeholder="Пароль" autocomplete="new-password" required="required"/>
+                    <button type="button"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.4">
 <path d="M14.1223 9.87999C15.2933 11.051 15.2933 12.952 14.1223 14.125C12.9513 15.296 11.0503 15.296 9.87727 14.125C8.70627 12.954 8.70627 11.053 9.87727 9.87999C11.0503 8.70699 12.9503 8.70699 14.1223 9.87999" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 12C3 11.341 3.152 10.689 3.446 10.088V10.088C4.961 6.991 8.309 5 12 5C15.691 5 19.039 6.991 20.554 10.088V10.088C20.848 10.689 21 11.341 21 12C21 12.659 20.848 13.311 20.554 13.912V13.912C19.039 17.009 15.691 19 12 19C8.309 19 4.961 17.009 3.446 13.912V13.912C3.152 13.311 3 12.659 3 12Z" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -73,9 +75,8 @@
                 </div>
                 <div class="auth__step-item two-icons"> 
                   <div class="auth__step-input"> 
-                    <input class="input input-password" type="password" placeholder="Повторите пароль" autocomplete="new-password"/>
-                    <button type="button">
-                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <input class="input input-password" type="password" placeholder="Повторите пароль" autocomplete="new-password" required="required"/>
+                    <button type="button"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.4">
 <path d="M14.1223 9.87999C15.2933 11.051 15.2933 12.952 14.1223 14.125C12.9513 15.296 11.0503 15.296 9.87727 14.125C8.70627 12.954 8.70627 11.053 9.87727 9.87999C11.0503 8.70699 12.9503 8.70699 14.1223 9.87999" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 12C3 11.341 3.152 10.689 3.446 10.088V10.088C4.961 6.991 8.309 5 12 5C15.691 5 19.039 6.991 20.554 10.088V10.088C20.848 10.689 21 11.341 21 12C21 12.659 20.848 13.311 20.554 13.912V13.912C19.039 17.009 15.691 19 12 19C8.309 19 4.961 17.009 3.446 13.912V13.912C3.152 13.311 3 12.659 3 12Z" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -90,9 +91,114 @@
 <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                   </div>
-                  <p class="auth__step-error-p">Пароли не совпадають</p>
-                  <p class="auth__step-success-p">Надежный пароль</p>
+                  <p class="auth__step-error-p">Пароли не совпадають </p>
+                  <p class="auth__step-success-p">Надежный пароль </p>
                 </div>
+              </div>
+              <div class="auth__step auth__step_2">
+                <p class="auth__step-counter">2 из 4 шаг</p>
+                <p class="auth__step-title">Контакты партнера</p>
+                <p class="auth__step-desc">Все поля обязательны к заполнению</p>
+                <div class="auth__step-item">
+                  <div class="auth__step-input">
+                    <input class="input" type="text" placeholder="Фамилия Имя Отчество" required="required"/><svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#24B09C"/>
+<path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+<path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  </div>
+                  <p class="auth__step-error-p">Введите данные</p>
+                </div>
+                <div class="auth__step-item">
+                  <div class="auth__step-input">
+                    <input class="input" type="text" placeholder="Индекс и полный адрес" required="required"/><svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#24B09C"/>
+<path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+<path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  </div>
+                  <p class="auth__step-error-p">Введите данные</p>
+                </div>
+                <p class="auth__step-p">Укажите ссылки на все сайты, социальные сети, если вы блоггер – предоставьте ссылки на ваши каналы, аккаунты в социальных сетях. Максимально подробно опишите способ привлечения игроков.</p>
+                <div class="auth__step-item"> 
+                  <div class="auth__step-input"> 
+                    <textarea class="input" rows="6" placeholder="Источники трафика" required="required"></textarea><svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#24B09C"/>
+<path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+<path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  </div>
+                  <p class="auth__step-error-p">Введите данные </p>
+                </div>
+              </div>
+              <div class="auth__step auth__step_3"> 
+                <p class="auth__step-counter">3 из 4 шаг </p>
+                <p class="auth__step-title">Информация о партнере </p>
+                <p class="auth__step-desc">Все поля обязательны к заполнению </p>
+                <div class="auth__step-item">
+                  <div class="auth__step-input"> 
+                    <input class="input" type="email" placeholder="Email" required="required"/><svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#24B09C"/>
+<path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+<path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  </div>
+                </div>
+                <div class="auth__step-item">
+                  <div class="auth__step-input"> 
+                    <input class="input" type="text" placeholder="Телефон" required="required"/><svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#24B09C"/>
+<path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+<path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  </div>
+                </div>
+                <div class="auth__step-item">
+                  <div class="auth__step-input"> 
+                    <input class="input" type="text" placeholder="Ссылка на Телеграм" required="required"/><svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#24B09C"/>
+<path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+<path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  </div>
+                </div>
+              </div>
+              <div class="auth__step auth__step_4"> 
+                <p class="auth__step-counter">4 из 4 шаг</p>
+                <p class="auth__step-title">Платежная информация</p>
+                <p class="auth__step-text">Укажите предпочтительный способ выплаты. Если вы индивидуальный предприниматель, компания (ООО) или самозанятый — укажите все реквизиты для выплаты по безналичному расчёту. Если вы хотите работать как частное лицо — укажите платёжную систему, которую вы хотите использовать для получения выплат.</p>
+                <div class="auth__step-item">
+                  <div class="custom-select" id="registerCurrency"> 
+                    <select>
+                      <option value="0">Выберите способ оплаты</option>
+                      <option value="1">Расчетный счет (ООО, ИП, самозанятый)</option>
+                      <option value="2">Банковская карта</option>
+                      <option value="3">USDT</option>
+                      <option value="4">TRX</option>
+                      <option value="5">Bitcoin</option>
+                      <option value="6">Юмани</option>
+                    </select>
+                  </div>
+                </div>
+                <div id="registerCurrencyResult"></div>
               </div>
             </form>
             <div class="auth__footer"> 
@@ -119,6 +225,6 @@
         </div>
       </div>
     </div>
-    <script src="../js/app.min.js?_v=20220625131528"></script>
+    <script src="../js/app.min.js?_v=20220626162920"></script>
   </body>
 </html>

@@ -149,16 +149,319 @@ const showPassword = () => {
   })
 }
 
+const customSelect = () => {
+  var x, i, j, l, ll, selElmnt, a, b, c;
+  x = document.getElementsByClassName("custom-select");
+  l = x.length;
+  for (i = 0; i < l; i++) {
+    selElmnt = x[i].getElementsByTagName("select")[0];
+    ll = selElmnt.length;
+    a = document.createElement("DIV");
+    a.setAttribute("class", "select-selected");
+    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    x[i].appendChild(a);
+    b = document.createElement("DIV");
+    b.setAttribute("class", "select-items select-hide");
+    for (j = 1; j < ll; j++) {
+      c = document.createElement("DIV");
+      c.innerHTML = selElmnt.options[j].innerHTML;
+      c.addEventListener("click", function(e) {
+          var y, i, k, s, h, sl, yl;
+          s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+          sl = s.length;
+          h = this.parentNode.previousSibling;
+          for (i = 0; i < sl; i++) {
+            if (s.options[i].innerHTML == this.innerHTML) {
+              s.selectedIndex = i;
+              h.innerHTML = this.innerHTML;
+              y = this.parentNode.getElementsByClassName("same-as-selected");
+              yl = y.length;
+              for (k = 0; k < yl; k++) {
+                y[k].removeAttribute("class");
+              }
+              this.setAttribute("class", "same-as-selected");
+              break;
+            }
+          }
+          h.click();
+      });
+      b.appendChild(c);
+    }
+    x[i].appendChild(b);
+    a.addEventListener("click", function(e) {
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+  }
+  
+  function closeAllSelect(elmnt) {
+    var x, y, i, xl, yl, arrNo = [];
+    x = document.getElementsByClassName("select-items");
+    y = document.getElementsByClassName("select-selected");
+    xl = x.length;
+    yl = y.length;
+    for (i = 0; i < yl; i++) {
+      if (elmnt == y[i]) {
+        arrNo.push(i)
+      } else {
+        y[i].classList.remove("select-arrow-active");
+      }
+    }
+    for (i = 0; i < xl; i++) {
+      if (arrNo.indexOf(i)) {
+        x[i].classList.add("select-hide");
+      }
+    }
+  }
+
+  document.addEventListener("click", closeAllSelect);
+}
+
+const registerCurrency = () => {
+  const selects = document.querySelectorAll('#registerCurrency .select-items div');
+  const result = document.querySelector('#registerCurrencyResult');
+  selects.forEach(select => {
+    select.addEventListener('click', () => {
+      if(select.innerHTML === 'Расчетный счет (ООО, ИП, самозанятый)'){
+        result.innerHTML = '';
+        result.innerHTML = `
+          <p class="auth__step-span">Введите реквизиты для получения средств:</p>
+          <div class="auth__step-item">
+            <div class="auth__step-input">
+              <input type="text" placeholder="ФИО Получателя" required class="input">  
+              <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="auth__step-item">
+            <div class="auth__step-input">
+              <input type="text" placeholder="Номер счета" required class="input">  
+              <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="auth__step-item">
+            <div class="auth__step-input">
+              <input type="text" placeholder="Банк получателя" required class="input">  
+              <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="auth__step-item">
+            <div class="auth__step-input">
+              <input type="text" placeholder="БИК" required class="input">  
+              <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="auth__step-item">
+            <div class="auth__step-input">
+              <input type="text" placeholder="Корр. счет" required class="input">  
+              <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        `;
+      } else if(select.innerHTML === 'Банковская карта') {
+        result.innerHTML = '';
+        result.innerHTML = `
+          <p class="auth__step-span">Введите реквизиты для получения средств:</p>
+          <div class="auth__step-item">
+            <div class="auth__step-input">
+              <input type="text" placeholder="Номер карты" required class="input">
+              <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="auth__step-item">
+            <div class="auth__step-input">
+              <input type="text" placeholder="Месяц/Год" required class="input">
+              <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <div class="auth__step-item">
+            <div class="auth__step-input">
+              <input type="text" placeholder="Имя Фамилия владельца" required class="input">
+              <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        `;
+      } else {
+        result.innerHTML = '';
+        result.innerHTML = `
+          <p class="auth__step-span">Введите реквизиты для получения средств:</p>
+          <div class="auth__step-item">
+            <div class="auth__step-input">
+              <input type="text" placeholder="Номер кошелька" required class="input">  
+              <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        `;
+      }
+    })
+  })
+}
+
+const registerSteps = () => {
+  const register = document.querySelector('#register');
+  const next = register.querySelector('.auth__next');
+  const prev = register.querySelector('.auth__prev');
+  const cancel = register.querySelector('.auth__cancel');
+  const login = register.querySelector('.auth__button');
+  const footer = register.querySelector('.auth__footer-left');
+  const content = register.querySelector('.auth__content');
+  let active = register.querySelector('.auth__step.active');
+  let nextEl = active.nextElementSibling;
+  let prevEl = active.previousElementSibling;
+
+  next.addEventListener('click', () => {
+    active = register.querySelector('.auth__step.active');
+    nextEl = active.nextElementSibling;
+
+    const end = () => {
+      next.classList.add('inactive');
+      if(!register.querySelector('.auth__submit')){
+        const submitBtn = document.createElement('button');
+        const sogl = document.createElement('p');
+  
+        submitBtn.classList.add('auth__submit');
+        submitBtn.setAttribute('type', 'submit');
+        submitBtn.innerHTML = 'Отправить заявку';
+  
+        sogl.classList.add('auth__sogl');
+        sogl.innerHTML = `
+          Нажимая на кнопку вы автоматически соглашаетесь с <a href="#!">Условиями сайта</a> и <a href="#!">Политикой конфиденциальности</a>
+        `
+  
+        footer.prepend(submitBtn);
+        content.append(sogl);
+      }
+    }
+
+    if (nextEl) {
+      active.classList.remove('active');
+      nextEl.classList.add('active');
+      active = register.querySelector('.auth__step.active');
+      nextEl = active.nextElementSibling;
+      if(nextEl){
+        cancel.classList.add('inactive');
+        login.classList.add('inactive');
+        prev.classList.remove('inactive');
+      }
+      if (!nextEl) {
+        end();
+      }
+    } else {
+      end();
+    }
+  })
+
+  prev.addEventListener('click', () => {
+    active = register.querySelector('.auth__step.active');
+    prevEl = active.previousElementSibling;
+
+    const end = () => {
+      login.classList.remove('inactive');
+      cancel.classList.remove('inactive');
+      prev.classList.add('inactive');
+    }
+
+    if (prevEl) {
+      active.classList.remove('active');
+      prevEl.classList.add('active');
+      active = register.querySelector('.auth__step.active');
+      prevEl = active.previousElementSibling;
+      if(!active.classList.contains('auth__step_4')){
+        if(register.querySelector('.auth__sogl')){
+          register.querySelector('.auth__sogl').remove();
+          register.querySelector('.auth__submit').remove();
+          next.classList.remove('inactive');
+        }
+      }
+      if(!prevEl){
+        end();
+      }
+    } else {
+      end();
+    }
+  })
+
+}
+
 window.onload = () => {
+  customSelect();
+  accordion();
   if(document.querySelector('#home')){
     getHeader();
     headerMenu();
     generateStars();
     generateFlyingStars();
     initSliders();
-    accordion();
   }
   if(document.querySelector('.input-password')){
     showPassword();
+  }
+  if(document.querySelector('#register')){
+    registerCurrency();
+    registerSteps();
   }
 }
