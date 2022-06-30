@@ -447,9 +447,68 @@ const registerSteps = () => {
 
 }
 
+const notification = () => {
+  let menuOpened = false;
+  const btn = document.querySelector('.theme__header-notification-btn');
+  const menu = document.querySelector('.theme__header-notification-content');
+
+  btn.addEventListener('click', () => {
+    menuOpened = !menuOpened;
+    btn.classList.toggle('active')
+  });
+
+  window.onclick = (e) => {
+    if (menuOpened && e.target.classList.contains('theme__header-notification-close')){
+      menuOpened = !menuOpened;
+      btn.classList.toggle('active')
+    }
+    if (menuOpened && !e.composedPath().includes(btn) && !e.composedPath().includes(menu)){
+      menuOpened = !menuOpened;
+      btn.classList.toggle('active')
+    } 
+  }
+}
+
+const themeHeader = () => {
+  if(document.querySelector('.theme__header-button')){
+    const headerButton = document.querySelector(".theme__header-button");
+    const headerMenu = document.querySelector(".theme__header-menu");
+    const headerLink = document.querySelectorAll('.header__link');
+
+    let menuOpened = false;
+
+    const menuToggle = () => {
+      menuOpened = !menuOpened;
+      headerButton.classList.toggle("open");
+      headerMenu.classList.toggle("open");
+      document.body.classList.toggle('o-hidden');
+    };
+    
+    headerButton.onclick = menuToggle;
+
+    headerLink.forEach(el => {
+      menuOpened 
+        el.addEventListener('click', menuToggle)
+    })
+    
+    window.onclick = (e) => {
+      if (
+        menuOpened &&
+        !e.composedPath().includes(headerButton) &&
+        !e.composedPath().includes(headerMenu)
+      )
+        menuToggle();
+    };
+  }
+}
+
 window.onload = () => {
   customSelect();
   accordion();
+  themeHeader();
+  if(document.querySelector('.theme__header-notification-btn')){
+    notification();
+  }
   if(document.querySelector('#home')){
     getHeader();
     headerMenu();

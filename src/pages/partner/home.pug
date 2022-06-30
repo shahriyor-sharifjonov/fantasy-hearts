@@ -10,6 +10,10 @@ html(lang="en")
         .theme 
             include ../../components/sidebar.pug 
             +sidebar('partner')
-            .content 
+            .home 
+                include ../../components/header.pug 
+                +header('partner')
+                .content  
+                    p salom olam )
 
         script(src="../js/app.min.js")
