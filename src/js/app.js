@@ -510,7 +510,7 @@ const setCharts = () => {
       data: [2, 10, 25, 1, 3, 50, 19, 1, 45, 2]
     }],
     chart: {
-      height: 255,
+      height: 237,
       type: 'line',
       foreColor: '#0E322F',
       zoom: {

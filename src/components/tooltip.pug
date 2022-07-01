@@ -1,0 +1,22 @@
+mixin tooltip-body(text)
+    button(type="button").tooltip__button
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="8" r="8" fill="white"/>
+            <path d="M8.07305 11.3343C8.01119 11.3343 7.96105 11.3845 7.96105 11.4463C7.96105 11.5082 8.01119 11.5583 8.07305 11.5583C8.1349 11.5583 8.18504 11.5082 8.18504 11.4463C8.18504 11.3845 8.1349 11.3343 8.07305 11.3343" stroke="#6A7C7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 6.29443C10 7.63838 8.07373 8.08635 8.07373 8.98232" stroke="#6A7C7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 6.29453C6.06047 5.24895 6.95387 4.44841 7.99979 4.5026C9.04571 4.44841 9.9391 5.24895 9.99958 6.29453" stroke="#6A7C7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    .tooltip__content 
+        p #{text} 
+
+mixin tooltip(text, classList)
+    if classList === 'left'
+        div(class="tooltip left")
+            +tooltip-body(text)
+    if classList === 'center'
+        div(class="tooltip center")
+            +tooltip-body(text)
+    if classList === 'right'
+        div(class="tooltip right")
+            +tooltip-body(text)
+        
