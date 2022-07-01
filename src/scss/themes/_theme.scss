@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Nunito', sans-serif !important;
     scroll-behavior: smooth;
     scroll-margin: 85px;
     @include media(576){
@@ -63,7 +63,21 @@ a{
     text-decoration: none;
 }
 
-
+.apexcharts-tooltip {
+    background: #FFFFFF;
+    padding: 6px 8px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 16px 0px #0000000F, 0px 1px 2px 0px #0000000F, 0px 8px 32px 0px #0000000A;
+    color: #1D1D1D;
+}
+.apexcharts-title-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+.apexcharts-element-hidden{
+    display: none;
+}
 
 .custom-select {
     position: relative;
@@ -129,9 +143,6 @@ a{
     }
 }
 
-.home{
-    flex: 1 1 auto;
-}
 
 .theme{
     min-height: 100vh;
@@ -155,6 +166,8 @@ a{
             justify-content: flex-end;
             background: #fff;
             padding: 32px;
+            z-index: 12;
+            position: relative;
             @include media(1200){
                 background: #0E322F;
                 height: 48px;
@@ -167,10 +180,18 @@ a{
                     justify-content: flex-end;
                     column-gap: 24px;
                     padding: 0;
+                    @media (min-width: 1201px){
+                        width: 100%;
+                        max-width: 100%;
+                    }
                     @include media(1200){
+                        padding: 0 15px;
                         width: 100%;
                         z-index: 51;
                         column-gap: 22px;
+                    }
+                    @include media(576){
+                        padding: 0;
                     }
                 }
                 &-avatar{
@@ -371,6 +392,7 @@ a{
         }
         &-notification{
             position: relative;
+            z-index: 1;
             @include media(576){
                 position: static;
             }
@@ -542,5 +564,8 @@ a{
         align-items: center;
         justify-content: center;
         padding: 15px 15px 56px 15px;
+        @include media(1200){
+            padding: 20px 15px 56px 15px;
+        }
     }
 }

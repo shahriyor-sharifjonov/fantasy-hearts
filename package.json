@@ -44,6 +44,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "apexcharts": "^3.35.3",
     "jquery": "^3.6.0"
   }
 }

@@ -1,6 +1,7 @@
 import * as functions from "./modules/functions.js";
 import Swiper, { Navigation, Pagination } from 'swiper';
 import $ from 'jquery';
+import ApexCharts from 'apexcharts';
 
 functions.isWebp();
 
@@ -502,6 +503,159 @@ const themeHeader = () => {
   }
 }
 
+const setCharts = () => {
+  var options = {
+    series: [{
+      name: "Регистрации",
+      data: [2, 10, 25, 1, 3, 50, 19, 1, 45, 2]
+    }],
+    chart: {
+      height: 255,
+      type: 'line',
+      foreColor: '#0E322F',
+      zoom: {
+        enabled: true,
+        type: 'x',  
+        autoScaleYaxis: true,  
+        zoomedArea: {
+          fill: {
+            color: '#55CEBA',
+            opacity: 0.4
+          },
+          stroke: {
+            color: '#55CEBA',
+            opacity: 0.4,
+            width: 1
+          }
+        }
+      }
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'straight'
+    },
+    title: {
+      text: 'Регистрации',
+      align: 'left'
+    },
+    grid: {
+      show: true,
+      borderColor: '#CCCCCC',
+      strokeDashArray: 0,
+      position: 'back',
+      xaxis: {
+        lines: {
+          show: true
+        }
+      }, 
+      yaxis: {
+        lines: {
+          show: false
+        }
+      },
+    },
+    xaxis: {
+      type: 'category',
+      categories: ['фев', 'март', 'апр', 'май', 'июнь', 'июль', 'авг', 'сен', 'окт', 'ноя'],
+      tickAmount: undefined,
+      tickPlacement: 'start',
+      position: 'left',
+      labels: {
+        show: true,
+        style: {
+          colors: ['#1D1D1D'],
+          fontSize: '12px',
+          fontWeight: 400,
+          cssClass: 'apexcharts-xaxis-label',
+        },
+        offsetX: 0,
+        offsetY: 0,
+      },
+      tooltip: {
+        enabled: false,
+      },
+    },
+    colors: ['#55CEBA'],
+    markers: {
+      size: 5,
+      colors: ['#55CEBA'],
+      strokeWidth: 0,
+      fillOpacity: 1,
+      shape: "circle",
+      radius: 2,
+      offsetX: 0,
+      offsetY: 0,
+      showNullDataPoints: true,
+      hover: {
+        size: 6,
+      }
+    },
+    stroke: {
+      show: true,
+      curve: 'straight',
+      lineCap: 'butt',
+      colors: undefined,
+      width: 2,
+      dashArray: 0,      
+    },
+    tooltip: {
+      enabled: true,
+      enabledOnSeries: undefined,
+      shared: true,
+      followCursor: true,
+      intersect: false,
+      inverseOrder: false,
+      custom: undefined,
+      fillSeriesColor: false,
+      theme: false,
+      style: {
+        fontSize: '14px',
+        fontFamily: undefined
+      },
+      onDatasetHover: {
+        highlightDataSeries: true,
+      },
+      x: {
+        show: false,
+      },
+      y: {
+        formatter: undefined,
+        title: {
+          formatter: (seriesName) => seriesName,
+        },
+      },
+      z: {
+        formatter: undefined,
+        title: 'Size: '
+      },
+      marker: {
+        show: true,
+      },
+      items: {
+        display: 'flex',
+      },
+      fixed: {
+        enabled: false,
+        position: 'topRight',
+        offsetX: 0,
+        offsetY: 0,
+      },
+    },
+    dropShadow: {
+      enabled: true,
+      top: 0,
+      left: 0,
+      blur: 3,
+      opacity: 0.5
+    }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  chart.render();
+}
+
 window.onload = () => {
   customSelect();
   accordion();
@@ -522,5 +676,8 @@ window.onload = () => {
   if(document.querySelector('#register')){
     registerCurrency();
     registerSteps();
+  }
+  if(document.querySelector('#chart')){
+    setCharts();
   }
 }
