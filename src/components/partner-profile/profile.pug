@@ -1,0 +1,50 @@
+mixin profile()
+    .profile
+        p.home__title Таблица пользователей
+        .profile__content 
+            .profile__user 
+                .profile__user-img 
+                    img(src="../@img/avatar.png", alt="" draggable="false")
+                .profile__user-input 
+                    input(type="file" id="avatar")
+                    label(for="avatar") Изменить#[br]фотографию 
+            .profile__wrapper 
+                .profile__item
+                    p.profile__item-label ФИО
+                    p.profile__item-p Зорин Роман Олегович
+                .profile__item
+                    p.profile__item-label Телефон
+                    p.profile__item-p +7 (953) 707-70-97
+                .profile__item
+                    p.profile__item-label Email 
+                    p.profile__item-p artspace68@yandex.ru 
+                .profile__item
+                    p.profile__item-label Telegram 
+                    p.profile__item-p @aoket 
+                .profile__item
+                    p.profile__item-label Логин 
+                    p.profile__item-p Aoket68 
+                .profile__item
+                    p.profile__item-label ID 
+                    p.profile__item-p 124221 
+                .profile__item
+                    p.profile__item-label Пароль 
+                    p.profile__item-p ****************** 
+                        a(href="#!").profile__item-btn 
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7683 3.16733L10.833 2.232C10.5723 1.97133 10.1503 1.97133 9.89033 2.232L2.66699 9.45467V11.3333H4.54566L11.7683 4.11067C12.029 3.85 12.029 3.428 11.7683 3.16733Z" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 14H14" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10.5802 5.30004L8.7002 3.42004" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
+                .profile__item
+                    p.profile__item-label Страна проживания
+                    p.profile__item-p Россия
+                .profile__item
+                    p.profile__item-label Индекс
+                    p.profile__item-p 688321
+                .profile__item
+                    p.profile__item-label Город
+                    p.profile__item-p Тамбов
+                .profile__item.big 
+                    p.profile__item-label Адрес
+                    p.profile__item-p ул. Мичуринская, д. 120, корпус 3 строение 1

@@ -5,14 +5,14 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge") 
         meta(name="viewport", content="width=device-width, initial-scale=1.0") 
         link(rel="stylesheet", href="../css/style.min.css") 
-        title Регистрация 
+        title Главная 
     body 
         .theme 
             include ../../components/sidebar.pug 
-            +sidebar('partner')
+            +sidebar('partner', '1')
             .home 
                 include ../../components/header.pug 
-                +header('partner')
+                +header('partner', '1')
                 .content.container    
                     .home__breadcrumb 
                         a(href="#!").home__breadcrumb-item

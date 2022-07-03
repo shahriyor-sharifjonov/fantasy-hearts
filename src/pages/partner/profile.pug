@@ -1,0 +1,34 @@
+doctype html 
+html(lang="en") 
+    head 
+        meta(charset="UTF-8") 
+        meta(http-equiv="X-UA-Compatible", content="IE=edge") 
+        meta(name="viewport", content="width=device-width, initial-scale=1.0") 
+        link(rel="stylesheet", href="../css/style.min.css") 
+        title Профиль 
+    body 
+        .theme 
+            include ../../components/sidebar.pug 
+            +sidebar('partner', '2')
+            .home 
+                include ../../components/header.pug 
+                +header('partner', '2')
+                .content.container    
+                    .home__breadcrumb 
+                        a(href="#!").home__breadcrumb-item
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.6249 12.85C12.1007 11.5323 10.8258 10.6675 9.40759 10.6677H6.59042C5.71055 10.6676 4.86368 11.0027 4.2221 11.6048V11.6048C3.85133 11.9525 3.56169 12.3777 3.37374 12.85L3.22168 13.2301" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="5.99902" y="4.49841" width="4.00167" height="4.33514" rx="2" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="1.99707" y="1.99744" width="12.005" height="12.005" rx="3.33333" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            span Профиль
+                    include ../../components/partner-profile/profile.pug 
+                    +profile 
+                    .home__row 
+                        include ../../components/partner-profile/withdraw-info.pug 
+                        +withdraw-info 
+                        include ../../components/partner-profile/traffic.pug 
+                        +traffic 
+
+
+        script(src="../js/app.min.js")

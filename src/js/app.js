@@ -507,7 +507,7 @@ const setCharts = () => {
   var options = {
     series: [{
       name: "Регистрации",
-      data: [2, 10, 25, 1, 3, 50, 19, 1, 45, 2]
+      data: [12, 10, 25, 1, 3, 50, 19, 1, 45, 2]
     }],
     chart: {
       height: 237,
