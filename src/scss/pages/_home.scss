@@ -57,6 +57,35 @@
     .users{
         width: 100%;
     }
+    &__fixed-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 8px;
+        margin-left: auto;
+        background: #FFFFFF;
+        border: 1px solid rgba(14, 50, 47, 0.2);
+        border-radius: 12px;
+        padding: 14px 16px;
+        @include media(1200){
+            margin-right: auto;
+            border: none;
+            padding: 0px;
+        }
+        span{
+            font-family: 'Jura';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+            color: #0E322F; 
+            @include media(576){
+                font-size: 14px;
+                line-height: 14px;
+            }           
+        }
+    }
 }
 .graph{
     max-width: 100%;

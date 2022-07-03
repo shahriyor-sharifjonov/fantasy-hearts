@@ -64,7 +64,18 @@ a{
     color: inherit;
     text-decoration: none;
 }
-
+input[type="checkbox"]{
+    appearance: none;
+    border: 1px solid #C6C6C6;
+    border-radius: 4px;
+    min-width: 16px;
+    width: 16px;
+    height: 16px;
+    &:checked{
+        background: url('../img/checked.png') center / cover no-repeat;
+        border: none;
+    }
+}
 .apexcharts-tooltip {
     background: #FFFFFF;
     padding: 6px 8px;

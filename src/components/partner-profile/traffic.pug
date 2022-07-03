@@ -1,3 +1,30 @@
 mixin traffic()
     .traffic.home__col
         p.home__title Источники трафика 
+        .traffic__container 
+            .traffic__item 
+                input(type="checkbox" checked) 
+                p.traffic__item-title Facebook
+                p.traffic__item-link http://facebook.com/community
+            .traffic__item 
+                input(type="checkbox" checked) 
+                p.traffic__item-title Instagram
+                p.traffic__item-link http://facebook.com/community
+            .traffic__item 
+                input(type="checkbox" checked) 
+                p.traffic__item-title Telegram
+                p.traffic__item-link http://tg.com/community
+            .traffic__item 
+                input(type="checkbox" checked) 
+                p.traffic__item-title VK
+                p.traffic__item-link http://vk.ru/community
+            .traffic__item 
+                input(type="checkbox") 
+                p.traffic__item-title Личный сайт
+                p.traffic__item-link http://hearts.com
+            button(type="button").traffic__btn 
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#168A80"/>
+                    <rect y="7" width="16" height="2" fill="#168A80"/>
+                </svg>
+                span Добавить ещё
