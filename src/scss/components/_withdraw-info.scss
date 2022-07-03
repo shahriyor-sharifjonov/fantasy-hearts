@@ -1,0 +1,81 @@
+.withdraw-info{
+    &__container{
+        background: #FFFFFF;
+        box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.04), 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 4px 16px rgba(0, 0, 0, 0.06);
+        border-radius: 20px;
+        padding: 32px;
+        @include media(576){
+            padding: 24px 16px;
+        }
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #1D1D1D;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 32px;
+        @include media(576){
+            margin-bottom: 12px;
+        }
+    }
+    &__edit{
+        margin-left: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+    }
+    &__subtitle{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 16px;
+        span{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.02em;
+            color: #1D1D1D;
+            opacity: 0.6;
+        }
+    }
+    &__row{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &:not(:last-of-type){
+            margin-bottom: 12px;
+        }
+        p{
+            min-width: 150px;
+            width: 150px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.02em;
+            color: #1D1D1D;
+            opacity: 0.6;
+            @include media(576){
+                min-width: 129px;
+                width: 129px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+        b{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.02em;
+            color: #1D1D1D;
+            @include media(576){
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+}

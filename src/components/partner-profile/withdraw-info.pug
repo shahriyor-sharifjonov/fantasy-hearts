@@ -1,3 +1,36 @@
+mixin edit-icon()
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.4">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7683 3.16733L10.833 2.232C10.5723 1.97133 10.1503 1.97133 9.89033 2.232L2.66699 9.45467V11.3333H4.54566L11.7683 4.11067C12.029 3.85 12.029 3.428 11.7683 3.16733Z" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2 14H14" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.5802 5.30004L8.7002 3.42004" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+    </svg>
+
+
 mixin withdraw-info()
     .withdraw-info.home__col
         p.home__title Платежная информация
+        .withdraw-info__container 
+            .withdraw-info__title Выплаты производятся через расчетный счет в банке 
+                a(href="#!").withdraw-info__edit
+                    +edit-icon 
+            .withdraw-info__subtitle 
+                span Реквизиты
+                a(href="#!").withdraw-info__edit
+                    +edit-icon 
+            .withdraw-info__row 
+                p Получатель: 
+                b Зорин Роман Олегович
+            .withdraw-info__row 
+                p Номер счёта: 
+                b 0102014020*******
+            .withdraw-info__row 
+                p Банк получателя:
+                b АО «Альфа-Банк»
+            .withdraw-info__row 
+                p БИК:
+                b 044525593
+            .withdraw-info__row 
+                p Корр. счёт:
+                b 301018102000000****
