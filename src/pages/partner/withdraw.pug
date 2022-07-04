@@ -1,0 +1,35 @@
+doctype html 
+html(lang="en") 
+    head 
+        meta(charset="UTF-8") 
+        meta(http-equiv="X-UA-Compatible", content="IE=edge") 
+        meta(name="viewport", content="width=device-width, initial-scale=1.0") 
+        link(rel="stylesheet", href="../css/style.min.css") 
+        title Профиль 
+    body 
+        .theme 
+            include ../../components/sidebar.pug 
+            +sidebar('partner', '3')
+            .home 
+                include ../../components/header.pug 
+                +header('partner', '3')
+                .content.container.min    
+                    .home__breadcrumb 
+                        a(href="#!").home__breadcrumb-item
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.66699 7.93739V5.39406C2.66699 4.56206 3.18233 3.81672 3.96033 3.52272L9.52899 1.42006C10.4017 1.09139 11.3337 1.73539 11.3337 2.66806V4.90139" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11.4997 9.40067C11.4077 9.40134 11.3337 9.47601 11.3337 9.56801C11.3337 9.66001 11.4083 9.73467 11.5003 9.73401C11.5923 9.73401 11.667 9.65934 11.667 9.56734C11.667 9.47534 11.5923 9.40067 11.4997 9.40067" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.10833 14H12.0003C13.1003 14 14.0003 13.1 14.0003 12V6.90063C14.0003 5.79597 13.105 4.90063 12.0003 4.90063H4.00033C3.26366 4.90063 2.66699 5.4973 2.66699 6.23397V8.1713" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4.99967 14.6667C2.97501 14.6667 1.33301 13.0247 1.33301 11C1.33301 8.97537 2.97501 7.33337 4.99967 7.33337C7.02501 7.33337 8.66634 8.97537 8.66634 11C8.66634 13.0247 7.02501 14.6667 4.99967 14.6667" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.00033 9.53796V12.4626" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.46209 11H3.53809" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            span Заказать выплату
+                    include ../../components/partner-withdraw/withdraw.pug 
+                    +withdraw
+                    include ../../components/partner-withdraw/history.pug 
+                    +history
+                    
+
+
+        script(src="../js/app.min.js")

@@ -1,0 +1,42 @@
+.withdraw{
+    width: 100%;
+    margin-bottom: 40px;
+    @include media(576){
+        margin-bottom: 32px;
+    }
+    &__content{
+        background: #FFFFFF;
+        box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.04), 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 4px 16px rgba(0, 0, 0, 0.06);
+        border-radius: 20px;
+        padding: 32px;
+        @include media(576){
+            padding: 24px 16px;
+        }
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #0E322F;
+        margin-bottom: 2px;
+    }
+    &__price{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 24px;
+        letter-spacing: -0.02em;
+        color: #1D1D1D;
+    }
+    &__desc{
+        margin-top: 24px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #0E322F;
+        opacity: 0.7;
+        @include media(576){
+            margin-top: 16px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+mixin withdraw()
+    .withdraw
+        p.home__title Заказать выплату
+        .withdraw__content 
+            p.withdraw__p Всего доступно к выводу
+            p.withdraw__price 1 200,00 ₽
+            form(action="#").auth__step-item.pass-recovery
+                .auth__step-input.double 
+                    input(type="text" placeholder="Введите сумму в руб." autocomplete="off" required).input
+                    <svg class="auth__step-success-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#24B09C"/>
+                        <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="auth__step-error-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#FF3D3D"/>
+                        <path d="M6 6L14 14M14 6L6 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                button(type="submit" disabled).auth__next Заказать выплату
+            p.withdraw__desc *Перед заказом выплаты проверьте, верно ли указаны реквизиты

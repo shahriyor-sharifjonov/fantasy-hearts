@@ -583,6 +583,11 @@ input[type="checkbox"]{
         @media (min-width: 1201px){
             width: 100%;
             max-width: 100%;
+            &.min{
+                padding: 0 15px;
+                max-width: 670px !important;
+                width: 100% !important;
+            }
         }
     }
 }
