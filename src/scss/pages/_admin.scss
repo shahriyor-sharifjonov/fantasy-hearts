@@ -10,6 +10,8 @@
         justify-content: flex-start;
         @include media(1200){
             margin-top: 0;
+            width: 100%;
+            margin-bottom: 0;
         }
         &-title{
             margin-bottom: 0;

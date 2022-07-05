@@ -14,20 +14,21 @@ html(lang="en")
                 include ../../components/header.pug 
                 +header('admin', '3')
                 .content.container    
-                    .home__breadcrumb 
-                        a(href="#!").home__breadcrumb-item
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.228 5.53271L9.228 2.42138C8.506 1.85938 7.49467 1.85938 6.772 2.42138L2.772 5.53271C2.28467 5.91138 2 6.49404 2 7.11138V12C2 13.1047 2.89533 14 4 14H12C13.1047 14 14 13.1047 14 12V7.11138C14 6.49404 13.7153 5.91138 13.228 5.53271Z" stroke="#0E322F"/>
-                                <path d="M6 11.3333H10" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            span Главная
-                    .home__row 
-                        include ../../components/partner-home/balance.pug 
-                        +balance 
-                        include ../../components/partner-home/graph.pug 
-                        +graph 
-                    include ../../components/partner-home/users.pug 
-                    +users 
+                    .admin__heading
+                        h1.admin__heading-title.home__title Выплаты
+                        .home__breadcrumb 
+                            a(href="#!").home__breadcrumb-item
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.33398 3.33333H14.0007" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.33398 7.99996H14.0007" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.91992 3.33333H4.74859" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.33333 4.74731V1.91931" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M7.33398 12.6667H14.0007" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4.27583 7.05737C4.7965 7.57804 4.7965 8.42204 4.27583 8.9427C3.75517 9.46337 2.91117 9.46337 2.3905 8.9427C1.86983 8.42204 1.86983 7.57804 2.3905 7.05737C2.91117 6.5367 3.75517 6.5367 4.27583 7.05737" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4.27583 11.724C4.7965 12.2447 4.7965 13.0887 4.27583 13.6093C3.75517 14.13 2.91117 14.13 2.3905 13.6093C1.86983 13.0887 1.86983 12.2447 2.3905 11.724C2.91117 11.2033 3.75517 11.2033 4.27583 11.724" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                span Список выплат
+                    .maniki 
 
 
         script(src="../js/app.min.js")
