@@ -13,18 +13,23 @@ html(lang="en")
             .home.h-100
                 include ../../components/header.pug 
                 +header('admin', '2')
-                .content.container.chat-app        
+                .content.container.chat-app    
                     .admin__heading
                         h1.admin__heading-title.home__title Сообщения
                         .home__breadcrumb 
-                            a(href="#!").home__breadcrumb-item
+                            a(href="chat.html").home__breadcrumb-item
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6667 14H3.33333C2.59667 14 2 13.4033 2 12.6667V3.33333C2 2.59667 2.59667 2 3.33333 2H12.6667C13.4033 2 14 2.59667 14 3.33333V12.6667C14 13.4033 13.4033 14 12.6667 14Z" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M2 10H4.92133C5.174 10 5.40467 10.1427 5.51733 10.3687L5.81533 10.9647C5.92867 11.1907 6.15933 11.3333 6.412 11.3333H9.588C9.84067 11.3333 10.0713 11.1907 10.184 10.9647L10.482 10.3687C10.5953 10.1427 10.826 10 11.0787 10H14" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                                 span Сообщения
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.66536 5.33337L9.33203 8.00004L6.66536 10.6667" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            a(href="#!").home__breadcrumb-item
+                                span ID123521
                     .chat 
-                        .chat__list  
+                        .chat__list.hide-md   
                             a(href="inbox.html").chat__item 
                                 .chat__item-id.yellow ID123521 
                                 .chat__item-text Константинопольский Константин Константинович
@@ -82,7 +87,7 @@ html(lang="en")
                             a(href="inbox.html").chat__item 
                                 .chat__item-id ID123521 
                                 .chat__item-text Константинопольский Константин Константинович
-                        .chat__content.hide-md  
+                        .chat__content 
                             .chat__messages
                                 .chat__messages-inner
                                     .chat__mess 

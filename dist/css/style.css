@@ -2288,7 +2288,6 @@
   display: -ms-flexbox;
   display: flex;
   height: calc(100vh - 165px);
-  background: #E0EEED;
   border-radius: 20px;
 }
 
@@ -2310,6 +2309,21 @@
 
 .chat__item:not(:last-of-type) {
   border-bottom: 1px solid #E1E1E1;
+}
+
+.chat__item.active {
+  background: #EFFCFB;
+  position: relative;
+}
+
+.chat__item.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  width: 3px;
+  background: #24B09C;
 }
 
 .chat__item-id {
@@ -2360,6 +2374,7 @@
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  background: #E0EEED;
 }
 
 .chat__messages {
@@ -2404,6 +2419,16 @@
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #000000;
+  margin-bottom: 6px;
+}
+
+.chat__mess-data {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #727272;
 }
 
 .chat__form {
@@ -5127,6 +5152,34 @@ input[type=checkbox]:checked {
     row-gap: 12px;
   }
 
+  .chat__list {
+    width: 100%;
+  }
+
+  .chat__list.hide-md {
+    display: none;
+  }
+
+  .chat__item.active {
+    background: #fff;
+  }
+
+  .chat__item.active::before {
+    display: none;
+  }
+
+  .chat__content.hide-md {
+    display: none;
+  }
+
+  .chat__form {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .chat__form-input {
+    border-radius: 0 0 0 20px;
+  }
+
   .profile__item {
     width: calc(50% - 24px);
   }
@@ -5366,6 +5419,39 @@ input[type=checkbox]:checked {
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
+  }
+
+  .chat {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
+    height: calc(100vh - 120px);
+    border-radius: 20px 20px 0 0;
+  }
+
+  .chat-app {
+    padding-bottom: 0 !important;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+
+  .chat__list {
+    border-radius: 20px 20px 0 0;
+    width: calc(100% - 30px);
+    margin-left: 15px;
+  }
+
+  .chat__mess {
+    padding: 16px;
+  }
+
+  .chat__form {
+    border-radius: 0;
+  }
+
+  .chat__form-btn {
+    border-radius: 0;
   }
 
   .profile {
