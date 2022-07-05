@@ -8,6 +8,35 @@ mixin edit-icon()
     </svg>
 
 
+mixin withdraw-info-edit()
+    .withdraw-info.home__col
+        p.home__title Платежная информация
+        .withdraw-info__container 
+            p.withdraw-info-label Тип выплат
+            .withdraw-info__content 
+                .custom-select
+                    select 
+                        option(value="Выплаты производятся через расчетный счет в банке ") Выплаты производятся через расчетный счет в банке 
+                        option(value="Выплаты производятся через расчетный счет в банке") Выплаты производятся через расчетный счет в банке 
+                        option(value="Lorem") Lorem 
+                        option(value="Ipsum") Ipsum 
+                .withdraw-info__block
+                    .withdraw-info-label Получатель: 
+                    input(type="text" value="Зорин Роман Олегович")
+                .withdraw-info__block
+                    .withdraw-info-label Номер счёта: 
+                    input(type="text" value="0102014020*******")
+                .withdraw-info__block
+                    .withdraw-info-label Банк получателя:
+                    input(type="text" value="АО «Альфа-Банк»")
+                .withdraw-info__block
+                    .withdraw-info-label БИК:
+                    input(type="text" value="044525593")
+                .withdraw-info__block
+                    .withdraw-info-label Корр. счёт:
+                    input(type="text" value="301018102000000****")
+            button(type='button' disabled).save-btn Сохранить изменения
+
 mixin withdraw-info()
     .withdraw-info.home__col
         p.home__title Платежная информация

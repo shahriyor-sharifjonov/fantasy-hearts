@@ -600,6 +600,36 @@ input[type="checkbox"]{
     }
 }
 
+.save-btn{
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #0E322F;
+    padding: 17px 24px;
+    background: #FFC93D;
+    box-shadow: 0px 8px 16px rgba(255, 201, 61, 0.02);
+    border-radius: 12px;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.mt-0{
+        margin-top: 0;
+    }
+    &.mt-small{
+        margin-top: 20px;
+    }
+    @include media(576){
+        width: 100%;
+    }
+    &:disabled{
+        opacity: 0.6;
+    }
+}
+
 .partners{
     height: calc(100vh - 165px);
     @include media(1200){

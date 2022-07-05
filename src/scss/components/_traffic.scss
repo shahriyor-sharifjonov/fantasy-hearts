@@ -17,7 +17,10 @@
         justify-content: flex-start;
         gap: 12px;
         flex-wrap: wrap;
-        input{
+        &.gap-0{
+            gap: 0;
+        }
+        input[type="checkbox"]{
             &:checked{
                 &~.traffic__item{
                     &-title{
@@ -28,6 +31,50 @@
                     }
                 }
             }
+        }
+        &-label{
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 16px;
+            letter-spacing: -0.02em;
+            color: #0E322F;
+            opacity: 0.6;
+            margin-bottom: 2px;
+        }
+        &-input{
+            position: relative;
+            width: 100%;
+            margin-bottom: 8px;
+            input{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: -0.02em;
+                color: #0E322F;
+                padding: 10px 16px;
+                border: 1px solid rgba(#0E322F, 0.4);
+                border-radius: 12px;
+                width: 100%;
+                padding: 10px 44px 10px 16px;
+            }
+            button{
+                position: absolute;
+                top: 50%;
+                right: 14px;
+                transform: translateY(-50%);
+                line-height: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &-desc{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: -0.02em;
+            color: #0E322F;
+            opacity: 0.8;
         }
         &-title{
             font-weight: 600;
@@ -49,11 +96,9 @@
     }
     &__btn{
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
         gap: 12px;
-        margin-left: auto;
-        margin-right: auto;
         margin-top: 12px;
         span{
             font-weight: 600;
