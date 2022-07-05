@@ -10,24 +10,36 @@ html(lang="en")
         .theme 
             include ../../components/sidebar.pug 
             +sidebar('admin', '1')
-            .home 
+            .home.h-100 
                 include ../../components/header.pug 
                 +header('admin', '1')
-                .content.container    
-                    .home__breadcrumb 
-                        a(href="#!").home__breadcrumb-item
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.228 5.53271L9.228 2.42138C8.506 1.85938 7.49467 1.85938 6.772 2.42138L2.772 5.53271C2.28467 5.91138 2 6.49404 2 7.11138V12C2 13.1047 2.89533 14 4 14H12C13.1047 14 14 13.1047 14 12V7.11138C14 6.49404 13.7153 5.91138 13.228 5.53271Z" stroke="#0E322F"/>
-                                <path d="M6 11.3333H10" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            span Главная
-                    .home__row 
-                        include ../../components/partner-home/balance.pug 
-                        +balance 
-                        include ../../components/partner-home/graph.pug 
-                        +graph 
+                .content.container.chat-app    
+                    .admin__heading
+                        h1.admin__heading-title.home__title Список партнеров
+                        .home__breadcrumb 
+                            a(href="chat.html").home__breadcrumb-item
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6667 14H3.33333C2.59667 14 2 13.4033 2 12.6667V3.33333C2 2.59667 2.59667 2 3.33333 2H12.6667C13.4033 2 14 2.59667 14 3.33333V12.6667C14 13.4033 13.4033 14 12.6667 14Z" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 10H4.92133C5.174 10 5.40467 10.1427 5.51733 10.3687L5.81533 10.9647C5.92867 11.1907 6.15933 11.3333 6.412 11.3333H9.588C9.84067 11.3333 10.0713 11.1907 10.184 10.9647L10.482 10.3687C10.5953 10.1427 10.826 10 11.0787 10H14" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                span Список партнеров 
+                        .admin__heading-form 
+                            form(action="#").admin__heading-input
+                                input(type="text" placeholder="Найти партнера")
+                                button(type='submit') 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.7138 6.8382C18.1647 9.28913 18.1647 13.2629 15.7138 15.7138C13.2629 18.1647 9.28913 18.1647 6.8382 15.7138C4.38727 13.2629 4.38727 9.28913 6.8382 6.8382C9.28913 4.38727 13.2629 4.38727 15.7138 6.8382" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M19 19L15.71 15.71" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            button(type="button").admin__heading-btn Добавить
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18 20H6C4.895 20 4 19.105 4 18V6C4 4.895 4.895 4 6 4H18C19.105 4 20 4.895 20 6V18C20 19.105 19.105 20 18 20Z" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 8V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 12H8" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            .admin__heading-button
                     include ../../components/partner-home/users.pug 
-                    +users 
+                    +partners 
 
 
         script(src="../js/app.min.js")

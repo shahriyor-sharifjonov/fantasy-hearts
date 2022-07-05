@@ -17,6 +17,31 @@ mixin user-item()
         .users__item.users__item_5
             p 160 ₽
 
+mixin partner-item()
+    .users__row.partners__item-row 
+        .users__item.partners__item_1
+            input(type="checkbox").checkbox
+            div.bg 
+            p Константинопольский Константин Константинович
+        .users__item.partners__item_2
+            p 123521
+        .users__item.partners__item_3
+            p Aoket68
+        .users__item.partners__item_4
+            p artspace68@yandex.ru
+        .users__item.partners__item_5
+            p —
+        .users__item.partners__item_6
+            p —
+        .users__item.partners__item_7
+            p —
+        .users__item.partners__item_8
+            p A
+        .users__item.partners__item_9
+            p 43
+        .users__item.partners__item_10
+            p 14:21:22
+
 mixin users()
     include ../tooltip.pug
     .users 
@@ -70,3 +95,85 @@ mixin users()
                         +user-item()
                         +user-item()
                         +user-item()
+
+mixin partners()
+    include ../tooltip.pug
+    .users.partners 
+        .partners__filter 
+            .partners__filter-count 
+                p Выбрано: 0
+                button(type="button")
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 7L17 17M17 7L7 17" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            button(type="button").partners__filter-btn Экспорт Excel
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 10H6C4.895 10 4 10.895 4 12V19C4 20.105 4.895 21 6 21H18C19.105 21 20 20.105 20 19V12C20 10.895 19.105 10 18 10H16" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 3V14" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.00098 6L12 3L15 6" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+        .users__wrapper 
+            .users__inner 
+                .users__content 
+                    .users__header
+                        .users__header-item.partners__item_1
+                            button(type="button").users__header-btn 
+                                +filter-svg
+                                p Партнер
+                        .users__header-item.partners__item_2
+                            button(type="button").users__header-btn 
+                                +filter-svg
+                                p ID
+                        .users__header-item.partners__item_3
+                            button(type="button").users__header-btn
+                                +filter-svg
+                                p Ник
+                        .users__header-item.partners__item_4
+                            button(type="button").users__header-btn 
+                                +filter-svg
+                                p Email
+                        .users__header-item.partners__item_5
+                            button(type="button").users__header-btn 
+                                +filter-svg
+                                p R0
+                        .users__header-item.partners__item_6
+                            button(type="button").users__header-btn 
+                                +filter-svg
+                                p R7
+                        .users__header-item.partners__item_7
+                            button(type="button").users__header-btn 
+                                +filter-svg
+                                p R14
+                        .users__header-item.partners__item_8
+                            button(type="button").users__header-btn 
+                                +filter-svg
+                                p Рейтинг
+                        .users__header-item.partners__item_9
+                            button(type="button").users__header-btn 
+                                +filter-svg
+                                p Боев
+                        .users__header-item.partners__item_10
+                            button(type="button").users__header-btn 
+                                +filter-svg
+                                p Время
+                    .users__list 
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item() 
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()

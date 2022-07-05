@@ -9,11 +9,12 @@
         overflow: hidden;
         &>.content{
             height: calc(100% - 116px);
+            justify-content: flex-start;
             @include media(1200){
                 height: calc(100% - 37px);
             }
             &>.admin__heading{
-                margin-top: -77px;
+                margin-top: -99px;
             }
         }
     }
@@ -175,6 +176,7 @@
     &__header{
         position: sticky;
         top: 0;
+        z-index: 2;
         left: 0;
         display: flex;
         justify-content: space-between;
@@ -208,10 +210,12 @@
     &__row{
         width: max-content;
         display: flex;
+        position: relative;
         justify-content: space-between;
         align-items: center;
         padding: 20px 40px 20px 32px;
         min-width: calc(100% - 1px);
+        isolation: isolate;
     }
     &__item{
         p{
