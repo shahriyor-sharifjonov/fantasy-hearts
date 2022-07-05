@@ -2599,6 +2599,209 @@
   opacity: 0.7;
 }
 
+.maniki {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.04), 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 4px 16px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.04), 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 4px 16px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  max-height: calc(100vh - 170px);
+  overflow: auto;
+}
+
+.maniki__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 40px 18px 28px;
+  background: #E0EEED;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.maniki__top-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.maniki__item {
+  padding: 8px 40px 8px 28px;
+  border-bottom: 1px solid #E1E1E1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 52px;
+}
+
+.maniki__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.maniki__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.maniki_1 {
+  width: 267px;
+}
+
+.maniki_2 {
+  width: 100px;
+}
+
+.maniki_3 {
+  width: 178px;
+  text-align: right;
+}
+
+.maniki_5 {
+  width: 135px;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.maniki__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #0E322F80;
+}
+
+.maniki__title_dark {
+  color: #0E322F;
+}
+
+.maniki__p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #1D1D1D;
+}
+
+.maniki__button {
+  font-family: Jura;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+  color: #0E322F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 12px;
+     -moz-column-gap: 12px;
+          column-gap: 12px;
+  border: 1px solid #E1E1E1;
+  -webkit-filter: drop-shadow(0px 8px 16px rgba(255, 201, 61, 0.02));
+          filter: drop-shadow(0px 8px 16px rgba(255, 201, 61, 0.02));
+  border-radius: 8px;
+  height: 36px;
+  width: 223px;
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.maniki__button:hover {
+  background: #E9E9E9;
+}
+
+.maniki__btn {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #1D1D1D;
+  height: 24px;
+  width: 76px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: right;
+  -webkit-transition: 300ms ease;
+  -o-transition: 300ms ease;
+  transition: 300ms ease;
+}
+
+.maniki__btn.bg {
+  background: #E9E9E9;
+  border-radius: 4px;
+}
+
+.maniki__btn.bg:hover {
+  background: gainsboro;
+}
+
+.maniki__btn.bg-green {
+  background: #55CEBA;
+  border-radius: 4px;
+}
+
+.maniki__btn.bg-green:hover {
+  background: #37bea8;
+}
+
 .history {
   width: 100%;
   margin-bottom: 40px;
