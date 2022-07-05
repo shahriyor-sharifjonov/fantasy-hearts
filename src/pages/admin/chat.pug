@@ -10,7 +10,7 @@ html(lang="en")
         .theme 
             include ../../components/sidebar.pug 
             +sidebar('admin', '2')
-            .home 
+            .home.h-100
                 include ../../components/header.pug 
                 +header('admin', '2')
                 .content.container    
@@ -23,13 +23,91 @@ html(lang="en")
                                     <path d="M2 10H4.92133C5.174 10 5.40467 10.1427 5.51733 10.3687L5.81533 10.9647C5.92867 11.1907 6.15933 11.3333 6.412 11.3333H9.588C9.84067 11.3333 10.0713 11.1907 10.184 10.9647L10.482 10.3687C10.5953 10.1427 10.826 10 11.0787 10H14" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                                 span Сообщения
-                    .home__row 
-                        include ../../components/partner-home/balance.pug 
-                        +balance 
-                        include ../../components/partner-home/graph.pug 
-                        +graph 
-                    include ../../components/partner-home/users.pug 
-                    +users 
+                    .chat 
+                        .chat__list  
+                            a(href="#!").chat__item 
+                                .chat__item-id.yellow ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id.yellow ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id.yellow ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id.yellow ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id.active ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                            a(href="#!").chat__item 
+                                .chat__item-id ID123521 
+                                .chat__item-text Константинопольский Константин Константинович
+                        .chat__content 
+                            .chat__messages
+                                .chat__messages-inner
+                                    .chat__mess
+                                        p.chat__mess-p Добрый день! я хотел бы поменять инофрмацию о месте проживания, сможете помочь?
+                                        p.chat__mess-data 7 июня в 19:30:21
+                                    .chat__mess
+                                        p.chat__mess-p Добрый день! я хотел бы поменять инофрмацию о месте проживания, сможете помочь?
+                                        p.chat__mess-data 7 июня в 19:30:21
+                                    .chat__mess.my-mess 
+                                        p.chat__mess-p Здравствуйте, укажите новый адрес целиком. Страна, индекс, город, улица, дом
+                                        p.chat__mess-data 7 июня в 19:31:03
+                                    .chat__mess
+                                        p.chat__mess-p Добрый день! я хотел бы поменять инофрмацию о месте проживания, сможете помочь?
+                                        p.chat__mess-data 7 июня в 19:30:21
+                                    .chat__mess.my-mess 
+                                        p.chat__mess-p Здравствуйте, укажите новый адрес целиком. Страна, индекс, город, улица, дом
+                                        p.chat__mess-data 7 июня в 19:31:03
+                            form(action="#").chat__form 
+                                input(type="text" placeholder="Сообщение...").chat__form-input
+                                button(type="submit").chat__form-btn 
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.671 16.1987L14.0324 26.824C14.327 28.148 16.0857 28.4334 16.783 27.2707L27.7817 8.93869C28.383 7.93869 27.663 6.66669 26.4964 6.66669H5.76171C4.42437 6.66669 3.75504 8.28269 4.70037 9.22802L11.671 16.1987Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M27.786 7.41333L11.666 16.2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+
 
 
         script(src="../js/app.min.js")
