@@ -1,0 +1,21 @@
+.admin{
+    &__heading{
+        width: calc(100% - 200px);
+        align-self: flex-start;
+        margin-top: -99px;
+        margin-bottom: 54px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include media(1200){
+            margin-top: 0;
+        }
+        &-title{
+            margin-bottom: 0;
+            @include media(1200){
+                display: none;
+            }
+        }
+    }
+}
