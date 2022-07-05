@@ -1,0 +1,33 @@
+doctype html 
+html(lang="en") 
+    head 
+        meta(charset="UTF-8") 
+        meta(http-equiv="X-UA-Compatible", content="IE=edge") 
+        meta(name="viewport", content="width=device-width, initial-scale=1.0") 
+        link(rel="stylesheet", href="../css/style.min.css") 
+        title Главная 
+    body 
+        .theme 
+            include ../../components/sidebar.pug 
+            +sidebar('admin', '3')
+            .home 
+                include ../../components/header.pug 
+                +header('admin', '3')
+                .content.container    
+                    .home__breadcrumb 
+                        a(href="#!").home__breadcrumb-item
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.228 5.53271L9.228 2.42138C8.506 1.85938 7.49467 1.85938 6.772 2.42138L2.772 5.53271C2.28467 5.91138 2 6.49404 2 7.11138V12C2 13.1047 2.89533 14 4 14H12C13.1047 14 14 13.1047 14 12V7.11138C14 6.49404 13.7153 5.91138 13.228 5.53271Z" stroke="#0E322F"/>
+                                <path d="M6 11.3333H10" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            span Главная
+                    .home__row 
+                        include ../../components/partner-home/balance.pug 
+                        +balance 
+                        include ../../components/partner-home/graph.pug 
+                        +graph 
+                    include ../../components/partner-home/users.pug 
+                    +users 
+
+
+        script(src="../js/app.min.js")
