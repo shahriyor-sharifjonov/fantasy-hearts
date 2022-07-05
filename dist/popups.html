@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220706003909">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220706004913">
     <title>Страница партнерки </title>
   </head>
   <body> 
     <div class="wrapper"> 
       <div class="popups"> 
         <button class="popups__btn popup-open" type="button" data-target="#tech-popup">Написать в техподдержку</button>
+        <button class="popups__btn popup-open" type="button" data-target="#success-popup">Заявка отправлена</button>
+        <button class="popups__btn popup-open" type="button" data-target="#add-traffic-popup">Добавление источника трафика</button>
         <div class="popup" id="tech-popup">
           <div class="popup-bg popup-close"></div>
           <div class="popup__content">
@@ -18,7 +20,7 @@
 <path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
             </button>
-            <form class="popup__form" action=""> 
+            <form class="popup__form" action="#"> 
               <h2 class="popup__title">Написать в техподдержку</h2>
               <p class="popup__p">Если у вас возникли вопросы — вы можете задать их в этой форме, а так же запросить редактирование данных профиля</p>
               <div class="auth__step-input"> 
@@ -28,8 +30,43 @@
             </form>
           </div>
         </div>
+        <div class="popup" id="add-traffic-popup">
+          <div class="popup-bg popup-close"></div>
+          <div class="popup__content">
+            <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </button>
+            <form class="popup__form" action="#"> 
+              <h2 class="popup__title">Добавление источника трафика</h2>
+              <p class="popup__p">Введите ссылку на источник и опишите максимально подробно способ привелечения игроков</p>
+              <div class="auth__step-input"> 
+                <textarea class="input popup__textarea" placeholder="Ссылка и описание"></textarea>
+              </div>
+              <button class="popup__btn" type="submit" disabled>Отправить запрос</button>
+            </form>
+          </div>
+        </div>
+        <div class="popup" id="success-popup">
+          <div class="popup-bg popup-close"></div>
+          <div class="popup__content">
+            <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </button>
+            <div class="popup__cen"> 
+              <div class="popup__icon"><svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle opacity="0.2" cx="44" cy="44" r="44" fill="#24B09C"/>
+<path d="M26 44L39.5 57L62 31" stroke="#24B09C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              </div>
+              <h2 class="popup__title">Заявка отправлена</h2>
+              <p class="popup__p">Мы пришлем вам ответ на почту</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="js/app.min.js?_v=20220706003909"></script>
+    <script src="js/app.min.js?_v=20220706004913"></script>
   </body>
 </html>

@@ -1,4 +1,6 @@
 .popups{
+    flex-direction: column;
+    gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,6 +86,20 @@
         position: absolute;
         top: 16px;
         right: 16px;
+    }
+    &__cen{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    &__icon{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
     }
     &__title{
         font-family: Jura !important;
