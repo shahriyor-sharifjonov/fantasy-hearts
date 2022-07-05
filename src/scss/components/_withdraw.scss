@@ -71,11 +71,13 @@
     }  
     &__item{
         padding: 8px 36px 8px 28px;
-        border-bottom: 1px solid #E1E1E1;
         display: flex;
         justify-content: space-between;
         align-items: center;
         min-height: 52px;
+        &:not(:last-of-type){
+            border-bottom: 1px solid #E1E1E1;
+        }
         @include media(992){
             padding: 24px 16px 20px 16px;
             align-items: flex-start;
@@ -150,9 +152,11 @@
         font-size: 16px;
         line-height: 20px;
         letter-spacing: -0.02em;
-        color: #0E322F80;
+        color: #0E322F;
+        opacity: .8;
         &_dark{
             color: #0E322F;
+            opacity: 1;
         }
     }
     &__p{
@@ -218,12 +222,10 @@
         align-items: center;
         text-align: right;
         transition: 300ms ease;
-        &.bg{
-            background: #E9E9E9;
-            border-radius: 4px;
-            &:hover{
-                background: darken($color: #E9E9E9, $amount: 5);
-            }
+        background: #E9E9E9;
+        border-radius: 4px;
+        &:hover{
+            background: darken($color: #E9E9E9, $amount: 5);
         }
         &.bg-green{
             background: #55CEBA;

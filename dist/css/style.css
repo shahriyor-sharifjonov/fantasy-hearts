@@ -2861,7 +2861,6 @@
 
 .payouts__item {
   padding: 8px 36px 8px 28px;
-  border-bottom: 1px solid #E1E1E1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2872,6 +2871,10 @@
       -ms-flex-align: center;
           align-items: center;
   min-height: 52px;
+}
+
+.payouts__item:not(:last-of-type) {
+  border-bottom: 1px solid #E1E1E1;
 }
 
 .payouts__left {
@@ -2924,11 +2927,13 @@
   font-size: 16px;
   line-height: 20px;
   letter-spacing: -0.02em;
-  color: #0E322F80;
+  color: #0E322F;
+  opacity: 0.8;
 }
 
 .payouts__title_dark {
   color: #0E322F;
+  opacity: 1;
 }
 
 .payouts__p {
@@ -2999,14 +3004,11 @@
   -webkit-transition: 300ms ease;
   -o-transition: 300ms ease;
   transition: 300ms ease;
-}
-
-.payouts__btn.bg {
   background: #E9E9E9;
   border-radius: 4px;
 }
 
-.payouts__btn.bg:hover {
+.payouts__btn:hover {
   background: gainsboro;
 }
 
