@@ -3371,6 +3371,12 @@ input[type=checkbox]:checked {
   background: linear-gradient(33.32deg, #24B09C 12.71%, #FFC83D 77.51%);
 }
 
+.theme__header.partner-header .theme__header-avatar.admin-avatar {
+  padding: 4px;
+  background: -o-linear-gradient(299.33deg, #FFD7B390 18.57%, #F0A86590 90.66%);
+  background: linear-gradient(150.67deg, #FFD7B390 18.57%, #F0A86590 90.66%);
+}
+
 .theme__header.partner-header .theme__header-avatar img {
   width: 100%;
   height: 100%;
