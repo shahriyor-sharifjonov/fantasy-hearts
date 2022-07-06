@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20220706013342">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220706161214">
     <title>Страница партнерки </title>
   </head>
   <body> 
@@ -24,9 +24,9 @@
               <h2 class="popup__title">Написать в техподдержку</h2>
               <p class="popup__p">Если у вас возникли вопросы — вы можете задать их в этой форме, а так же запросить редактирование данных профиля</p>
               <div class="auth__step-input"> 
-                <textarea class="input popup__textarea" placeholder="Вопрос"></textarea>
+                <textarea class="enable-submit input popup__textarea" placeholder="Вопрос" data-button="#popup-button-1"></textarea>
               </div>
-              <button class="popup__btn" type="submit" disabled>Отправить письмо</button>
+              <button class="popup__btn" type="submit" disabled id="popup-button-1">Отправить письмо</button>
             </form>
           </div>
         </div>
@@ -41,9 +41,9 @@
               <h2 class="popup__title">Добавление источника трафика</h2>
               <p class="popup__p">Введите ссылку на источник и опишите максимально подробно способ привелечения игроков</p>
               <div class="auth__step-input"> 
-                <textarea class="input popup__textarea" placeholder="Ссылка и описание"></textarea>
+                <textarea class="enable-submit input popup__textarea" placeholder="Ссылка и описание" data-button="#popup-button-2"></textarea>
               </div>
-              <button class="popup__btn" type="submit" disabled>Отправить запрос</button>
+              <button class="popup__btn" type="submit" disabled id="popup-button-2">Отправить запрос</button>
             </form>
           </div>
         </div>
@@ -67,6 +67,6 @@
         </div>
       </div>
     </div>
-    <script src="js/app.min.js?_v=20220706013342"></script>
+    <script src="js/app.min.js?_v=20220706161214"></script>
   </body>
 </html>

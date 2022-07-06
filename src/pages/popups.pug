@@ -23,8 +23,8 @@ html(lang="en")
                             h2.popup__title Написать в техподдержку
                             p.popup__p Если у вас возникли вопросы — вы можете задать их в этой форме, а так же запросить редактирование данных профиля
                             .auth__step-input  
-                                textarea(placeholder="Вопрос").input.popup__textarea
-                            button(type="submit" disabled).popup__btn Отправить письмо
+                                textarea(placeholder="Вопрос" data-button="#popup-button-1").enable-submit.input.popup__textarea
+                            button(type="submit" disabled).popup__btn#popup-button-1 Отправить письмо
                 .popup#add-traffic-popup
                     .popup-bg.popup-close
                     .popup__content
@@ -36,8 +36,8 @@ html(lang="en")
                             h2.popup__title Добавление источника трафика
                             p.popup__p Введите ссылку на источник и опишите максимально подробно способ привелечения игроков
                             .auth__step-input  
-                                textarea(placeholder="Ссылка и описание").input.popup__textarea
-                            button(type="submit" disabled).popup__btn Отправить запрос
+                                textarea(placeholder="Ссылка и описание" data-button="#popup-button-2").enable-submit.input.popup__textarea
+                            button(type="submit" disabled).popup__btn#popup-button-2 Отправить запрос
                 .popup#success-popup
                     .popup-bg.popup-close
                     .popup__content

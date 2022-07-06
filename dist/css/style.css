@@ -206,7 +206,6 @@
   font-size: 18px;
   line-height: 100%;
   color: #FFFFFF;
-  opacity: 0.7;
   -webkit-transition: 300ms ease-out;
   -o-transition: 300ms ease-out;
   transition: 300ms ease-out;
@@ -1660,13 +1659,76 @@
   overflow: hidden;
   line-height: 0;
   margin-bottom: 16px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 388px;
+  height: 240px;
 }
 
 .how__item-img img {
+  max-height: 100%;
   max-width: 100%;
   border: 1px solid rgba(14, 50, 47, 0.2);
   border-radius: 12px;
+}
+
+.how__item-frame {
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 388px;
+  height: 240px;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid rgba(14, 50, 47, 0.2);
+  border-radius: 12px;
+  padding: 24px 24px 20px 24px;
+}
+
+.how__item-frame-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #2E2E2E;
+  opacity: 0.6;
+  margin-bottom: 25px;
+}
+
+.how__item-frame-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px 38px;
+}
+
+.how__item-frame-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 12px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.how__item-frame-item {
+  border-radius: 12px;
+  padding: 4px 13px;
+  background: #F6F2E3;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: center;
+  color: #000000;
+  position: relative;
+}
+
+.how__item-frame-item svg {
+  position: absolute;
+  top: -6px;
+  left: 12px;
 }
 
 .how__item-title {
@@ -6097,6 +6159,27 @@ input[type=checkbox]:checked {
 
   .how__info_1 {
     margin-bottom: 32px;
+  }
+
+  .how__item-img {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+
+  .how__item-frame {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+
+  .how__item-frame-content {
+    gap: 12px 20px;
+  }
+
+  .how__item-frame-item {
+    font-size: 16px;
+    line-height: 26px;
   }
 
   .how__item-title {

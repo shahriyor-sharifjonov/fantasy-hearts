@@ -27,9 +27,26 @@ mixin how()
                     .how__item-content
                         p.how__item-title Вознаграждение
                         p.how__item-p Вознаграждение партнера начисляется исходя из прогресса игрока. Прогресс занимает 30 календарных дней. Весь прогресс, который начинается с 31 дня и далее — не учитывается.
-                .how__item 
-                    .how__item-img 
-                        img(src="@img/how-item-2.png", alt="" draggable="false")
+                .how__item  
+                    .how__item-frame    
+                        .how__item-frame-title Таблица прогресса
+                        .how__item-frame-content 
+                            .how__item-frame-col
+                                .how__item-frame-item A = 15 000 ₽
+                                    <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.0670987 1.80046L1.78052 10.3676C1.83016 10.6157 2.04805 10.7944 2.30114 10.7944H12.0491C12.3022 10.7944 12.5201 10.6157 12.5697 10.3676L14.2831 1.80046C14.3844 1.29399 13.7762 0.95575 13.3994 1.30901L10.7796 3.76506C10.5537 3.97682 10.1953 3.95117 10.0019 3.7094L7.5897 0.694131C7.37716 0.428453 6.97308 0.428453 6.76054 0.694131L4.34832 3.7094C4.15491 3.95117 3.7965 3.97682 3.57062 3.76506L0.950833 1.30901C0.574025 0.955751 -0.034196 1.29399 0.0670987 1.80046Z" fill="url(#paint0_linear_52_349)"/>
+                                        <defs>
+                                        <linearGradient id="paint0_linear_52_349" x1="7.17512" y1="0.175903" x2="7.17512" y2="10.7944" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#FFE249"/>
+                                        <stop offset="1" stop-color="#FFC24A"/>
+                                        </linearGradient>
+                                        </defs>
+                                    </svg>
+                                .how__item-frame-item(style="background: #ECE0EE;") B = 7 500 ₽
+                                .how__item-frame-item(style="background: #E3F2F6;") C = 2 000 ₽
+                            .how__item-frame-col
+                                .how__item-frame-item(style="background: #E0EEED;") D = 500 ₽
+                                .how__item-frame-item(style="background: #F2F2F2;") E = 50 ₽
                     .how__item-content
                         p.how__item-title Прогресс игрока
                         p.how__item-p В программе есть 5 градаций игроков. От А до Е. Игрок классе Е оплачивается как 50 ₽. Игрок класса А — 15 000 ₽.

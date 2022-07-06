@@ -678,6 +678,21 @@ const setPopups = () => {
   })
 }
 
+const enableSubmit = () => {
+  const inputs = document.querySelectorAll('.enable-submit');
+  inputs.forEach(input => {
+    input.addEventListener('input', () => {
+      const target = input.getAttribute('data-button');
+      const btn = document.querySelector(target);
+      if(input.value.length > 0){
+        btn.removeAttribute('disabled');
+      }else{
+        btn.setAttribute('disabled', 'true');
+      }
+    })
+  })
+}
+
 window.onload = () => {
   customSelect();
   accordion();
@@ -704,6 +719,9 @@ window.onload = () => {
   }
   if(document.querySelector('.popup')){
     setPopups()
+  }
+  if(document.querySelector('.enable-submit')){
+    enableSubmit()
   }
 }
 
