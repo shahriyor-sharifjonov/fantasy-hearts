@@ -18,8 +18,7 @@
         .star{
             position: absolute;
             background: #FFFFFF;
-            box-shadow: 0px 0px 12px #24B09C;
-            filter: blur(1px);
+            box-shadow: 0px 0px 12px #fff;
             border-radius: 50%;
             z-index: -1;
             animation: blink infinite;
@@ -36,13 +35,20 @@
             transform: rotate(-14.35deg);
         }
     }
+    &__stars{
+        animation: linear rotate infinite 200s;    
+        height: 100%;
+        padding-bottom: 200%;
+        width: calc(100% + 100%);
+        margin-left: -50%;
+        margin-right: -50%;
+        margin-top: -20%;
+    }
     &__moon{
         position: absolute;
         top: 60px;
         left: 28%;
         z-index: 2;
-        animation: scale infinite;
-        animation-duration: 10s;
         img{
             box-shadow: inset 12px 8px 23px rgba(10, 23, 46, 0.74);
             filter: drop-shadow(0px 2px 40px rgba(138, 204, 232, 0.4));
@@ -194,7 +200,7 @@
       opacity: 1;
     }
     50% {
-      opacity: 0;
+      opacity: 1;
     }
     100% {
       opacity: 1;
@@ -221,5 +227,14 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0) translateY(0);
+    }
+    100% {
+        transform: rotate(-360deg) translateY(-100px);
     }
 }

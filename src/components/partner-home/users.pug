@@ -53,8 +53,8 @@ mixin users()
                         .users__header-item.users__item_1
                             button(type="button").users__header-btn 
                                 +filter-svg
-                                p DO
-                            +tooltip('DO', 'left')
+                                p D0
+                            +tooltip('Дата первого входа в игру', 'left')
                         .users__header-item.users__item_2
                             button(type="button").users__header-btn 
                                 +filter-svg
@@ -68,12 +68,12 @@ mixin users()
                             button(type="button").users__header-btn 
                                 +filter-svg
                                 p Время
-                            +tooltip('Время', 'center')
+                            +tooltip('сколько суммарно времени игрок провел в игре за последние 30 дней.', 'center')
                         .users__header-item.users__item_5
                             button(type="button").users__header-btn 
                                 +filter-svg
                                 p Заработок
-                            +tooltip('Заработок', 'right')
+                            +tooltip('сколько рублей партнерского дохода принес вам указанный игрок.', 'right')
                     .users__list 
                         +user-item()
                         +user-item()
