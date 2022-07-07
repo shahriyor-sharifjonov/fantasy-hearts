@@ -29,14 +29,13 @@
             background: url('../img/flying-star-1.png') center / cover no-repeat;
             width: 68px;
             height: 5px;
-            opacity: 1;
             z-index: 1; 
-            animation: blink-fly infinite;
+            animation: linear blink-fly infinite;
             transform: rotate(-14.35deg);
         }
     }
     &__stars{
-        animation: linear rotate infinite 200s;    
+        animation: linear rotate infinite 400s;    
         height: 100%;
         padding-bottom: 200%;
         width: calc(100% + 100%);
@@ -200,7 +199,7 @@
       opacity: 1;
     }
     50% {
-      opacity: 1;
+      opacity: 0;
     }
     100% {
       opacity: 1;
@@ -209,8 +208,11 @@
 
 @keyframes blink-fly {
     0% {
-      opacity: 1;
-      transform: translate(80px, -20px) rotate(-14.35deg);
+      opacity: 0;
+      transform: translate(160px, -40px) rotate(-14.35deg);
+    }
+    10%{
+        opacity: 1;
     }
     100% {
       opacity: 0;

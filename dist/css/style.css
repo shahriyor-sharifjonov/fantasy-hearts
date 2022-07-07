@@ -926,18 +926,17 @@
   position: absolute;
   width: 68px;
   height: 5px;
-  opacity: 1;
   z-index: 1;
-  -webkit-animation: blink-fly infinite;
-          animation: blink-fly infinite;
+  -webkit-animation: linear blink-fly infinite;
+          animation: linear blink-fly infinite;
   -webkit-transform: rotate(-14.35deg);
       -ms-transform: rotate(-14.35deg);
           transform: rotate(-14.35deg);
 }
 
 .leaderboard__stars {
-  -webkit-animation: linear rotate infinite 200s;
-          animation: linear rotate infinite 200s;
+  -webkit-animation: linear rotate infinite 400s;
+          animation: linear rotate infinite 400s;
   height: 100%;
   padding-bottom: 200%;
   width: 200%;
@@ -1129,7 +1128,7 @@
   }
 
   50% {
-    opacity: 1;
+    opacity: 0;
   }
 
   100% {
@@ -1143,7 +1142,7 @@
   }
 
   50% {
-    opacity: 1;
+    opacity: 0;
   }
 
   100% {
@@ -1153,9 +1152,13 @@
 
 @-webkit-keyframes blink-fly {
   0% {
+    opacity: 0;
+    -webkit-transform: translate(160px, -40px) rotate(-14.35deg);
+            transform: translate(160px, -40px) rotate(-14.35deg);
+  }
+
+  10% {
     opacity: 1;
-    -webkit-transform: translate(80px, -20px) rotate(-14.35deg);
-            transform: translate(80px, -20px) rotate(-14.35deg);
   }
 
   100% {
@@ -1167,9 +1170,13 @@
 
 @keyframes blink-fly {
   0% {
+    opacity: 0;
+    -webkit-transform: translate(160px, -40px) rotate(-14.35deg);
+            transform: translate(160px, -40px) rotate(-14.35deg);
+  }
+
+  10% {
     opacity: 1;
-    -webkit-transform: translate(80px, -20px) rotate(-14.35deg);
-            transform: translate(80px, -20px) rotate(-14.35deg);
   }
 
   100% {

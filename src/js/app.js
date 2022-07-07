@@ -62,10 +62,10 @@ const generateStars = () => {
   const getRandomNumber = (max = 100, min = 0) => Math.floor(Math.random() * (max - min + 1) + min)
   
   const starCreator = () => {
-    const starSize = getRandomNumber(10, 3) + "px";
+    const starSize = getRandomNumber(6, 3) + "px";
     const starTop = getRandomNumber() + "%";
     const starLeft = getRandomNumber() + "%";
-    const starDuration = getRandomNumber(7000, 3000) + "ms";
+    const starDuration = getRandomNumber(8000, 3000) + "ms";
     const star = document.createElement("span");
     star.classList.add("star");
     star.style.height = starSize;
@@ -76,8 +76,8 @@ const generateStars = () => {
     showcase.insertAdjacentElement("beforeend", star);
   };
 
-  const min = Math.round(window.innerWidth / 2)
-  const max = Math.round(window.innerWidth / 5)
+  const min = Math.round(window.innerWidth / 1)
+  const max = Math.round(window.innerWidth / 3)
 
   const starNum = getRandomNumber(max, min);
 
@@ -90,23 +90,28 @@ const generateFlyingStars = () => {
   const showcase = document.querySelector('.leaderboard__showcase');
 
   const getRandomNumber = (max = 100, min = 0) => Math.floor(Math.random() * (max - min + 1) + min)
+  const starDuration = 500;
   
   const starCreator = () => {
     const starTop = getRandomNumber() + "%";
     const starLeft = getRandomNumber() + "%";
-    const starDuration = getRandomNumber(500, 100) + "ms";
     const star = document.createElement("span");
     star.classList.add("flying-star");
     star.style.top = starTop;
     star.style.left = starLeft;
-    star.style.animationDuration = starDuration;
+    star.style.animationDuration = starDuration + "ms";
     showcase.insertAdjacentElement("beforeend", star);
+    setTimeout(() => {
+      star.remove();
+    }, 500);
   };
 
-  const starNum = getRandomNumber(10, 7);
+  const starNum = 3;
 
   for (let i = 0; i < starNum; i++) {
-    starCreator();
+    setInterval(() => {
+      starCreator()
+    }, 500);
   }
 }
 
