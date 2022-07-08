@@ -76,8 +76,8 @@ const generateStars = () => {
     showcase.insertAdjacentElement("beforeend", star);
   };
 
-  const min = Math.round(window.innerWidth / 1)
-  const max = Math.round(window.innerWidth / 3)
+  const min = Math.round(window.innerWidth / 3)
+  const max = Math.round(window.innerWidth / 7)
 
   const starNum = getRandomNumber(max, min);
 
@@ -108,7 +108,8 @@ const generateFlyingStars = () => {
 
   setInterval(() => {
     starCreator()
-  }, 500);
+    starCreator()
+  }, 700);
 }
 
 const initSliders = () => {
