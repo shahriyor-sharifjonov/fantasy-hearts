@@ -1153,8 +1153,8 @@
 @-webkit-keyframes blink-fly {
   0% {
     opacity: 0;
-    -webkit-transform: translate(160px, -40px) rotate(-14.35deg);
-            transform: translate(160px, -40px) rotate(-14.35deg);
+    -webkit-transform: translate(640px, -160px) rotate(-14.35deg);
+            transform: translate(640px, -160px) rotate(-14.35deg);
   }
 
   10% {
@@ -1171,8 +1171,8 @@
 @keyframes blink-fly {
   0% {
     opacity: 0;
-    -webkit-transform: translate(160px, -40px) rotate(-14.35deg);
-            transform: translate(160px, -40px) rotate(-14.35deg);
+    -webkit-transform: translate(640px, -160px) rotate(-14.35deg);
+            transform: translate(640px, -160px) rotate(-14.35deg);
   }
 
   10% {

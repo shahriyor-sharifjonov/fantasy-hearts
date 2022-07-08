@@ -106,13 +106,9 @@ const generateFlyingStars = () => {
     }, 500);
   };
 
-  const starNum = 3;
-
-  for (let i = 0; i < starNum; i++) {
-    setInterval(() => {
-      starCreator()
-    }, 500);
-  }
+  setInterval(() => {
+    starCreator()
+  }, 500);
 }
 
 const initSliders = () => {
