@@ -62,12 +62,12 @@ mixin traffic-edit()
                             </g>
                         </svg>
                 p.traffic__item-desc Подробное описание приведения игроков с помощью источника
-            button(type="button").traffic__btn 
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="7" width="2" height="16" fill="#168A80"/>
-                    <rect y="7" width="16" height="2" fill="#168A80"/>
-                </svg>
-                span Добавить ещё
+            //- button(type="button").traffic__btn 
+            //-     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            //-         <rect x="7" width="2" height="16" fill="#168A80"/>
+            //-         <rect y="7" width="16" height="2" fill="#168A80"/>
+            //-     </svg>
+            //-     span Добавить ещё
             button(type='button' disabled).save-btn.mt-small Сохранить изменения
 
 mixin traffic()
@@ -75,25 +75,96 @@ mixin traffic()
         p.home__title Источники трафика 
         .traffic__container 
             .traffic__item 
-                input(type="checkbox" checked) 
-                p.traffic__item-title Facebook
-                p.traffic__item-link http://facebook.com/community
+                .traffic__item-left
+                    .traffic__item-content
+                        p.traffic__item-title Facebook 
+                        p.traffic__item-link http://facebook.com/community 
+                    button(type='button').traffic__item-del 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.4">
+                            <path d="M5 7H19" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 7V18C18 19.105 17.105 20 16 20H8C6.895 20 6 19.105 6 18V7" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 3.75H9" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                .traffic__item-status.green
+                    p Принят
             .traffic__item 
-                input(type="checkbox" checked) 
-                p.traffic__item-title Instagram
-                p.traffic__item-link http://facebook.com/community
+                .traffic__item-left
+                    .traffic__item-content
+                        p.traffic__item-title Instagram 
+                        p.traffic__item-link http://facebook.com/community 
+                    button(type='button').traffic__item-del 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.4">
+                            <path d="M5 7H19" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 7V18C18 19.105 17.105 20 16 20H8C6.895 20 6 19.105 6 18V7" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 3.75H9" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                .traffic__item-status.gray
+                    p На обработке
             .traffic__item 
-                input(type="checkbox" checked) 
-                p.traffic__item-title Telegram
-                p.traffic__item-link http://tg.com/community
+                .traffic__item-left
+                    .traffic__item-content
+                        p.traffic__item-title Telegram 
+                        p.traffic__item-link http://tg.com/community 
+                    button(type='button').traffic__item-del 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.4">
+                            <path d="M5 7H19" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 7V18C18 19.105 17.105 20 16 20H8C6.895 20 6 19.105 6 18V7" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 3.75H9" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                .traffic__item-status.gray
+                    p На обработке
             .traffic__item 
-                input(type="checkbox" checked) 
-                p.traffic__item-title VK
-                p.traffic__item-link http://vk.ru/community
-            .traffic__item 
-                input(type="checkbox") 
-                p.traffic__item-title Личный сайт
-                p.traffic__item-link http://hearts.com
+                .traffic__item-left
+                    .traffic__item-content
+                        p.traffic__item-title VK 
+                        p.traffic__item-link http://vk.ru/community 
+                    button(type='button').traffic__item-del 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.4">
+                            <path d="M5 7H19" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 7V18C18 19.105 17.105 20 16 20H8C6.895 20 6 19.105 6 18V7" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 3.75H9" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                .traffic__item-status.gray
+                    p На обработке
+            .traffic__item.disabled 
+                .traffic__item-left
+                    .traffic__item-content
+                        p.traffic__item-title Личный сайт 
+                        p.traffic__item-link http://hearts.com 
+                    button(type='button').traffic__item-del 
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.4">
+                            <path d="M5 7H19" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 7V18C18 19.105 17.105 20 16 20H8C6.895 20 6 19.105 6 18V7" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 3.75H9" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                        </svg>
+                .traffic__item-status.red
+                    p Отклонен
+            .traffic__info 
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="10" fill="white"/>
+                <path d="M10.0131 12.361C9.84842 12.361 9.71842 12.309 9.62309 12.205C9.53642 12.101 9.48442 11.9536 9.46709 11.763L9.07709 6.79696C9.05109 6.47629 9.12042 6.22062 9.28509 6.02996C9.44975 5.83062 9.69242 5.73096 10.0131 5.73096C10.3251 5.73096 10.5591 5.83062 10.7151 6.02996C10.8798 6.22062 10.9491 6.47629 10.9231 6.79696L10.5331 11.763C10.5244 11.9536 10.4724 12.101 10.3771 12.205C10.2904 12.309 10.1691 12.361 10.0131 12.361ZM10.0131 15.065C9.71842 15.065 9.48009 14.974 9.29809 14.792C9.12475 14.61 9.03809 14.376 9.03809 14.09C9.03809 13.8126 9.12475 13.5873 9.29809 13.414C9.48009 13.232 9.71842 13.141 10.0131 13.141C10.3164 13.141 10.5504 13.232 10.7151 13.414C10.8884 13.5873 10.9751 13.8126 10.9751 14.09C10.9751 14.376 10.8884 14.61 10.7151 14.792C10.5504 14.974 10.3164 15.065 10.0131 15.065Z" fill="#777777"/>
+                </svg>
+                p Вы не можете добавить больше 5 источников. <br>Удалите один из текущих, чтобы добавить новый.
             button(type="button").traffic__btn 
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="7" width="2" height="16" fill="#168A80"/>

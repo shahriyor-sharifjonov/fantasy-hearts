@@ -171,7 +171,7 @@ input[type="checkbox"]{
         padding: 8px;
         height: 48px;
         pointer-events: none;
-        button, a, input, textarea{
+        button, a, input, textarea, p, span{
             pointer-events: all;
         }
         @include media(1200){
@@ -191,18 +191,29 @@ input[type="checkbox"]{
                 padding: 8px 12px;
             }
             .theme__header{
+                &-left{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include media(1200){
+                        display: none;
+                    }
+                }
                 &-right{
                     display: flex;
                     align-items: center;
                     justify-content: flex-end;
                     column-gap: 24px;
                     padding: 0;
+                    margin-left: auto;
+                    margin-right: 0;
                     @media (min-width: 1201px){
                         width: 100%;
-                        max-width: 100%;
+                        max-width: 160px;
                     }
                     @include media(1200){
                         padding: 0 15px;
+                        max-width: 100%;
                         width: 100%;
                         z-index: 51;
                         column-gap: 22px;
@@ -583,7 +594,7 @@ input[type="checkbox"]{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         padding: 15px 32px 56px 32px;
         @include media(1200){
             padding: 20px 15px 56px 15px;
@@ -754,6 +765,28 @@ input[type="checkbox"]{
         &_10{
             width: 55px;
             min-width: 55px;
+        }
+    }
+}
+
+.blocked-acc-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 61, 61, 0.1);
+    border-radius: 6px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    color: #FF3D3D;
+    margin-right: auto;
+    &.dn{
+        display: none;
+        @include media(1200){
+            display: block;
+            margin-bottom: 24px;
         }
     }
 }

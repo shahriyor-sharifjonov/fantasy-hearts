@@ -1,6 +1,57 @@
 mixin profile-edit()
     .profile
-        p.home__title Страница партнера
+        .profile__header.dn 
+            p.home__title Страница партнера
+        .profile__content 
+            .profile__user 
+                .profile__user-img 
+                    img(src="../@img/avatar.png", alt="" draggable="false")
+                .profile__user-input 
+                    input(type="file" id="avatar")
+                    label(for="avatar") Изменить#[br]фотографию 
+            .profile__wrapper 
+                .profile__item
+                    p.profile__item-label ФИО
+                    input(type="text" value="Зорин Роман Олегович")
+                .profile__item
+                    p.profile__item-label Телефон
+                    input(type="text" value="+7 (953) 707-70-97")
+                .profile__item
+                    p.profile__item-label Email 
+                    input(type="text" value="artspace68@yandex.ru ")
+                .profile__item
+                    p.profile__item-label Telegram 
+                    input(type="text" value="@aoket ")
+                .profile__item
+                    p.profile__item-label Логин 
+                    input(type="text" value="Aoket68 ")
+                .profile__item
+                    p.profile__item-label ID 
+                    input(type="text" value="124221 ")
+                .profile__item
+                    p.profile__item-label Пароль 
+                    input(type="text" value="****************** ")
+                .profile__item
+                    p.profile__item-label Страна проживания
+                    input(type="text" value="Россия")
+                .profile__item
+                    p.profile__item-label Индекс
+                    input(type="text" value="688321")
+                .profile__item
+                    p.profile__item-label Город
+                    input(type="text" value="Тамбов")
+                .profile__item.big 
+                    p.profile__item-label Адрес
+                    input(type="text" value="ул. Мичуринская, д. 120, корпус 3 строение 1")
+                button(type='button' disabled).save-btn.mt-0 Сохранить изменения
+
+mixin profile-edit-blocked()
+    .profile 
+        .profile__header 
+            p.home__title Страница партнера 
+            .profile__ban-info 
+                p.profile__ban-info-title Аккаунт приостановлен 
+                p.profile__ban-info-p по причине: Слишком подозрительная активность 
         .profile__content 
             .profile__user 
                 .profile__user-img 

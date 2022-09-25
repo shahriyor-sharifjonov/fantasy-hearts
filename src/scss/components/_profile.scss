@@ -1,4 +1,4 @@
-.profile{
+ .profile{
     width: 100%;
     margin-bottom: 40px;
     @include media(1200){
@@ -8,6 +8,40 @@
     }
     @include media(576){
         margin-bottom: 32px;
+    }
+    &__header{
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 24px;
+        @include media(1200){
+            &.dn{
+                display: none;
+            }
+            margin-bottom: 16px;
+        }
+        .home__title{
+            margin-bottom: 0;
+        }
+    }
+    &__ban-info{
+        &-title{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+            color: #FF3D3D;
+            margin-bottom: 4px;            
+        }
+        &-p{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: -0.02em;
+            color: #FF3D3D;
+            opacity: 0.8;
+        }
     }
     &__content{
         background: #FFFFFF;

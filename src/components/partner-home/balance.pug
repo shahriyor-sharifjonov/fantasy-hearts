@@ -50,3 +50,56 @@ mixin balance()
                 .balance__item-content
                     p.balance__item-title За весь период
                     p.balance__item-p 128 460,00 ₽
+
+mixin balance-blocked()
+    .balance.home__col
+        p.home__title Баланс
+        .balance__content 
+            .balance__item
+                .balance__item-img 
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="24" fill="#E0EEED"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0817 20.9497C18.1936 21.5013 14.4987 25.6346 14.4961 30.5537V31.1659C16.6205 28.6068 19.7561 27.1025 23.0817 27.0472V30.2756C23.0818 30.744 23.3495 31.1711 23.7711 31.3754C24.1926 31.5797 24.6938 31.5251 25.0615 31.235L33.0548 24.9233C33.3386 24.6997 33.5042 24.3583 33.5042 23.9969C33.5042 23.6356 33.3386 23.2942 33.0548 23.0706L25.0615 16.7589C24.6938 16.4688 24.1926 16.4142 23.7711 16.6185C23.3495 16.8227 23.0818 17.2499 23.0817 17.7183V20.9497Z" stroke="#6A7C7B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                .balance__item-content
+                    p.balance__item-title Доступно к выводу
+                    p.balance__item-p —
+            .balance__item
+                .balance__item-img 
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="#E3F2F7"/>
+                        <path d="M25.3203 28.0017H28.0014" stroke="#41717B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M26.6613 28.0016V22.9995L25.2007 24.3201" stroke="#41717B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M32.1484 25.1634L32.9747 20.3364C33.1838 19.1139 32.2424 17.9974 31.0019 17.9974H16.9981C15.7576 17.9974 14.8162 19.1139 15.0253 20.3354L15.8516 25.1624C15.8896 25.3855 15.8896 25.6146 15.8516 25.8377L15.0253 30.6647C14.8162 31.8872 15.7576 33.0037 16.9981 33.0037H31.0029C32.2424 33.0037 33.1838 31.8872 32.9747 30.6657L32.1484 25.8387C32.1104 25.6146 32.1104 25.3865 32.1484 25.1634Z" stroke="#41717B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M31.003 17.9975L31.1161 17.3342C31.3262 16.1127 30.3848 14.9962 29.1443 14.9962H18.856C17.6165 14.9962 16.6751 16.1127 16.8842 17.3342L16.9972 17.9975" stroke="#41717B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19.9985 23.9599C20.1576 23.4097 20.6438 22.9995 21.2451 22.9995C21.9734 22.9995 22.5646 23.5898 22.5646 24.3191C22.5646 24.9713 22.0354 25.5006 21.3831 25.5006C22.0354 25.5006 22.5646 26.0298 22.5646 26.682C22.5646 27.4103 21.9744 28.0016 21.2451 28.0016C20.6438 28.0016 20.1576 27.5914 19.9985 27.0412" stroke="#41717B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                .balance__item-content
+                    p.balance__item-title За текущий месяц
+                    p.balance__item-p —
+            .balance__item
+                .balance__item-img 
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="24" fill="#F7ECE3"/>
+                        <path d="M15.5195 20.9987C16.8596 17.2238 20.5342 14.7898 24.5327 15.0284C28.5313 15.267 31.8903 18.1207 32.772 22.0281C33.6538 25.9355 31.8457 29.9551 28.337 31.8877C24.8284 33.8203 20.4647 33.2002 17.6334 30.3666" stroke="#7B5D41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20.999 27.0013L24.0003 24V18.9979" stroke="#7B5D41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.9982 20.9987H14.9966V16.9971" stroke="#7B5D41" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                .balance__item-content
+                    p.balance__item-title За вчера
+                    p.balance__item-p —
+            .balance__item
+                .balance__item-img 
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="24" fill="#ECE0EE"/>
+                        <path d="M23.7178 19.986V24.637L27.3738 26.866" stroke="#604265" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M30.763 29.925C29.48 31.388 27.735 32.435 25.75 32.827" stroke="#604265" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.2368 18.075C18.5198 16.612 20.2648 15.565 22.2498 15.173" stroke="#604265" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.4852 26.896C15.1752 25.986 15.0002 25.014 15.0002 24C15.0002 22.986 15.1752 22.014 15.4852 21.104" stroke="#604265" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M32.5148 26.896C32.8248 25.986 32.9998 25.014 32.9998 24C32.9998 22.986 32.8248 22.014 32.5148 21.104" stroke="#604265" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.2368 29.925C18.5198 31.388 20.2648 32.435 22.2498 32.827" stroke="#604265" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M25.75 15.173C27.735 15.564 29.479 16.611 30.763 18.075" stroke="#604265" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                .balance__item-content
+                    p.balance__item-title За весь период
+                    p.balance__item-p —

@@ -61,12 +61,14 @@ mixin auth-step-2()
                 input(type="text" placeholder="Индекс и полный адрес" required).input
                 +status-icons 
             p.auth__step-error-p Введите данные
-        p.auth__step-p Укажите ссылки на все сайты, социальные сети, если вы блоггер – предоставьте ссылки на ваши каналы, аккаунты в социальных сетях. Максимально подробно опишите способ привлечения игроков.
+        p.auth__step-p Укажите ссылки на все сайты, социальные сети, если вы блоггер – предоставьте ссылки на ваши каналы, аккаунты в социальных сетях. Подробно опишите способ привлечения игроков. Максимальное количество источников — 5.
         .auth__step-item 
-            .auth__step-input 
-                textarea(rows="6" placeholder="Источники трафика" required).input
-                +status-icons 
-            p.auth__step-error-p Введите данные 
+            button(type="button").traffic__btn 
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="7" width="2" height="16" fill="#168A80"/>
+                    <rect y="7" width="16" height="2" fill="#168A80"/>
+                </svg>
+                span Добавить источник
 
 mixin auth-step-3()
     .auth__step.auth__step_3 

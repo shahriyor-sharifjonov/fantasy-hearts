@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../css/style.min.css?_v=20220708210524"/>
+    <link rel="stylesheet" href="../css/style.min.css?_v=20220925201212"/>
     <title>Главная </title>
   </head>
   <body> 
@@ -33,6 +33,75 @@
               </div>
             </div>
       <div class="home"> 
+                        <div class="popup" id="tech-popup">
+                          <div class="popup-bg popup-close"></div>
+                          <div class="popup__content">
+                            <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                            </button>
+                            <form class="popup__form" action="#"> 
+                              <h2 class="popup__title">Написать в техподдержку</h2>
+                              <div class="popup__inner">
+                                <div class="popup__track">
+                                  <p class="popup__p">Если у вас возникли вопросы — вы можете задать их в этой форме, а так же запросить редактирование данных профиля</p>
+                                  <div class="auth__step-input"> 
+                                    <input class="input" type="text" placeholder="Ваше имя"/>
+                                  </div>
+                                  <div class="auth__step-input"> 
+                                    <textarea class="enable-submit input popup__textarea" placeholder="Вопрос" data-button="#popup-button-1"></textarea>
+                                  </div>
+                                  <button class="popup__btn" type="submit" disabled="disabled" id="popup-button-1">Отправить письмо</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="popup" id="add-traffic-popup">
+                          <div class="popup-bg popup-close"></div>
+                          <div class="popup__content">
+                            <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                            </button>
+                            <form class="popup__form" action="#"> 
+                              <h2 class="popup__title">Добавление источника трафика</h2>
+                              <div class="popup__inner">
+                                <div class="popup__track">
+                                  <p class="popup__p">Введите ссылку на источник и опишите максимально подробно способ привелечения игроков</p>
+                                  <div class="auth__step-input"> 
+                                    <input class="input" type="text" placeholder="Название источника"/>
+                                  </div>
+                                  <div class="auth__step-input"> 
+                                    <input class="input" type="text" placeholder="Ссылка на источник"/>
+                                  </div>
+                                  <div class="auth__step-input"> 
+                                    <textarea class="enable-submit input popup__textarea" placeholder="Описание способа привлечения игроков" data-button="#popup-button-2"></textarea>
+                                  </div>
+                                </div>
+                                <button class="popup__btn" type="submit" disabled="disabled" id="popup-button-2">Отправить запрос</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="popup" id="success-popup">
+                          <div class="popup-bg popup-close"></div>
+                          <div class="popup__content">
+                            <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                            </button>
+                            <div class="popup__cen"> 
+                              <div class="popup__icon"><svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle opacity="0.2" cx="44" cy="44" r="44" fill="#24B09C"/>
+<path d="M26 44L39.5 57L62 31" stroke="#24B09C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                              </div>
+                              <h2 class="popup__title">Заявка отправлена</h2>
+                              <p class="popup__p">Мы пришлем вам ответ на почту</p>
+                            </div>
+                          </div>
+                        </div>
                 <div class="theme__header partner-header"> 
                   <div class="theme__header-menu"> 
                     <div class="theme__header-menu-top container"> <a class="theme__header-menu-link active" href="#!"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,10 +169,12 @@
           <div class="admin__heading">
             <div class="home__breadcrumb show"> <a class="home__breadcrumb-item" href="chat.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M14 8L10 12L14 16" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
-</svg><span>Вернуться к списку</span></a></div>
+</svg><span>Вернуться к списку </span></a></div>
           </div>
                     <div class="profile">
-                      <p class="home__title">Страница партнера</p>
+                      <div class="profile__header dn"> 
+                        <p class="home__title">Страница партнера</p>
+                      </div>
                       <div class="profile__content"> 
                         <div class="profile__user"> 
                           <div class="profile__user-img"> <picture><source srcset="../img/avatar.webp" type="image/webp"><img src="../img/avatar.png" alt="" draggable="false"/></picture></div>
@@ -270,21 +341,15 @@
                               </div>
                               <p class="traffic__item-desc">Подробное описание приведения игроков с помощью источника</p>
                             </div>
-                            <button class="traffic__btn" type="button">
-                               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="7" width="2" height="16" fill="#168A80"/>
-<rect y="7" width="16" height="2" fill="#168A80"/>
-</svg><span>Добавить ещё</span>
-                            </button>
                             <button class="save-btn mt-small" type="button" disabled="disabled">Сохранить изменения</button>
                           </div>
                         </div>
           </div>
           <div class="home__fixed-buttons"> 
-            <button class="home__fixed-buttons_1" type="button"> <span>В архив</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M21 7H3C2.448 7 2 6.552 2 6V4C2 3.448 2.448 3 3 3H21C21.552 3 22 3.448 22 4V6C22 6.552 21.552 7 21 7Z" stroke="#5C5C5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9 11H15" stroke="#5C5C5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M20.667 7V19C20.667 20.105 19.772 21 18.667 21H5.33301C4.22801 21 3.33301 20.105 3.33301 19V7" stroke="#5C5C5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <button class="home__fixed-buttons_1" type="button"> <span>Приостановить аккаунт</span><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="white"/>
+<rect x="6" y="6" width="4" height="12" stroke="#5C5C5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="14" y="6" width="4" height="12" stroke="#5C5C5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
             </button>
             <button class="home__fixed-buttons_2" type="button"> <span>Удалить партнера из системы</span></button>
@@ -292,6 +357,6 @@
         </div>
       </div>
     </div>
-    <script src="../js/app.min.js?_v=20220708210524"></script>
+    <script src="../js/app.min.js?_v=20220925201212"></script>
   </body>
 </html>

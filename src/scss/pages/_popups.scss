@@ -60,6 +60,7 @@
         flex-direction: column;
         align-items: flex-start;
         box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.04), 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 4px 16px rgba(0, 0, 0, 0.06);
+        max-height: 100%;
         @include media(575){
             border-radius: 20px 20px 0 0;
         }
@@ -81,6 +82,15 @@
         justify-content: center;
         flex-direction: column;
         z-index: -1;
+    }
+    &__form{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__inner{
+        max-height: 432px;
+        overflow: auto;
     }
     &-close-btn{
         position: absolute;
@@ -111,6 +121,7 @@
         color: #1D1D1D;
         margin-bottom: 12px;
         display: block;
+        background: linear-gradient(180deg, #FFFFFF 82.76%, rgba(255, 255, 255, 0) 100%);
     }
     &__p{
         font-weight: 400;
@@ -142,7 +153,7 @@
     }
     .auth__step-input{
         max-width: 100% !important;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
     }
     .popup__textarea{
         width: 100%;

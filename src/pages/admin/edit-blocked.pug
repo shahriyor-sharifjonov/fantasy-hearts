@@ -22,7 +22,7 @@ html(lang="en")
                                 </svg>
                                 span Вернуться к списку 
                     include ../../components/partner-profile/profile
-                    +profile-edit 
+                    +profile-edit-blocked 
                     .home__row 
                         include ../../components/partner-profile/withdraw-info
                         +withdraw-info-edit  
@@ -30,11 +30,10 @@ html(lang="en")
                         +traffic-edit 
                     .home__fixed-buttons 
                         button(type="button").home__fixed-buttons_1 
-                            span Приостановить аккаунт
+                            span Активировать аккаунт
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="24" height="24" fill="white"/>
-                            <rect x="6" y="6" width="4" height="12" stroke="#5C5C5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <rect x="14" y="6" width="4" height="12" stroke="#5C5C5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 12L7.5 18.0622L7.5 5.93782L18 12Z" stroke="#5C5C5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         button(type="button").home__fixed-buttons_2 
                             span Удалить партнера из системы
