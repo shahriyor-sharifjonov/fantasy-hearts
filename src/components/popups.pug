@@ -1,7 +1,7 @@
 mixin popups()
     .popup#tech-popup
         .popup-bg.popup-close
-        .popup__content
+        .popup__content 
             button(type="button").popup-close.popup-close-btn
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -16,9 +16,24 @@ mixin popups()
                         .auth__step-input  
                             textarea(placeholder="Вопрос" data-button="#popup-button-1").enable-submit.input.popup__textarea
                         button(type="submit" disabled).popup__btn#popup-button-1 Отправить письмо
+    .popup#request-cancel
+        .popup-bg.popup-close
+        .popup__content 
+            button(type="button").popup-close.popup-close-btn
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            form(action="#").popup__form 
+                h2.popup__title Отклонение запроса
+                .popup__inner
+                    .popup__track
+                        p.popup__p Укажите причину отклонения
+                        .auth__step-input  
+                            textarea(placeholder="Комментарий" data-button="#popup-button-1").enable-submit.input.popup__textarea
+                        button(type="submit" disabled).popup__btn#popup-button-1 Отклонить запрос
     .popup#add-traffic-popup
         .popup-bg.popup-close
-        .popup__content
+        .popup__content 
             button(type="button").popup-close.popup-close-btn
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -50,3 +65,17 @@ mixin popups()
                     </svg>
                 h2.popup__title Заявка отправлена
                 p.popup__p Мы пришлем вам ответ на почту
+    .popup#request-success
+        .popup-bg.popup-close
+        .popup__content
+            button(type="button").popup-close.popup-close-btn
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            .popup__cen  
+                .popup__icon
+                    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.2" cx="44" cy="44" r="44" fill="#24B09C"/>
+                        <path d="M26 44L39.5 57L62 31" stroke="#24B09C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                h2.popup__title Запрос принят

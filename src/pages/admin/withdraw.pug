@@ -1,3 +1,15 @@
+mixin payouts-item()
+    .payouts__item 
+        .payouts__left 
+            p.payouts__p.payouts_1 12.10.2022, 12:21:05
+            p.payouts__p.payouts_2 123532
+            p.payouts__p.payouts_3 1 600 ₽    
+        .payouts__right 
+            .payouts_5 
+                button(type="button").payouts__btn.bg-green Оплачено 
+
+
+
 doctype html 
 html(lang="en") 
     head 
@@ -28,7 +40,7 @@ html(lang="en")
                                     <path d="M4.27583 11.724C4.7965 12.2447 4.7965 13.0887 4.27583 13.6093C3.75517 14.13 2.91117 14.13 2.3905 13.6093C1.86983 13.0887 1.86983 12.2447 2.3905 11.724C2.91117 11.2033 3.75517 11.2033 4.27583 11.724" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                                 span Список выплат
-                    .payouts 
+                    .payouts.scroll-detect-class 
                         .payouts__top 
                             p.payouts__title.payouts__title_dark.payouts_1 Дата  и время вывода
                             p.payouts__title.payouts__title_dark.payouts_2 ID партнера
@@ -36,7 +48,7 @@ html(lang="en")
                             .payouts__top-right 
                                 p.payouts__title.payouts_4 Действие
                                 p.payouts__title.payouts_5 Статус
-                        .payouts__content
+                        .payouts__content.scroll-detect 
                             .payouts__item 
                                 .payouts__left 
                                     p.payouts__p.payouts_1 12.10.2022, 12:21:05
@@ -77,141 +89,36 @@ html(lang="en")
                                         </svg>
                                     .payouts_5 
                                         button(type="button").payouts__btn Заказано
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено 
-                            .payouts__item 
-                                .payouts__left 
-                                    p.payouts__p.payouts_1 12.10.2022, 12:21:05
-                                    p.payouts__p.payouts_2 123532
-                                    p.payouts__p.payouts_3 1 600 ₽    
-                                .payouts__right 
-                                    .payouts_5 
-                                        button(type="button").payouts__btn.bg-green Оплачено    
+                            +payouts-item
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                            +payouts-item   
+                    include ../../components/pagination 
+                    +pagination 
 
         script(src="../js/app.min.js")

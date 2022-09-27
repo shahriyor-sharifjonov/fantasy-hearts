@@ -362,10 +362,10 @@ const registerCurrency = () => {
   })
 }
 
-if(document.querySelector('.chat__list-content')){
-  document.querySelector('.chat__list-content').addEventListener('scroll', () => {
-    const content = document.querySelector('.chat__list-content')
-    const list = document.querySelector('.chat__list')
+if(document.querySelector('.scroll-detect')){
+  document.querySelector('.scroll-detect').addEventListener('scroll', () => {
+    const content = document.querySelector('.scroll-detect')
+    const list = document.querySelector('.scroll-detect-class')
     if ((content.scrollTop + content.offsetHeight) >= content.scrollHeight){
       list.classList.add('scrolled')
     }else{

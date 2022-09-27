@@ -1,0 +1,78 @@
+mixin logs-item()
+    .log 
+        p.log__data 17 августа в 16:30
+        p.log__p Администратор N поменял данные партнёра M. <br>Поле ФИО Агапов Виктор Викторович -> Агапкин Виктор Викторович
+
+
+
+doctype html 
+html(lang="en") 
+    head 
+        meta(charset="UTF-8") 
+        meta(http-equiv="X-UA-Compatible", content="IE=edge") 
+        meta(name="viewport", content="width=device-width, initial-scale=1.0") 
+        link(rel="stylesheet", href="../css/style.min.css") 
+        title Главная 
+    body 
+        .theme 
+            include ../../components/sidebar.pug 
+            +sidebar('admin', '4')
+            .home.h-100
+                include ../../components/header.pug 
+                +header('admin', '4')
+                .content.container    
+                    .admin__heading
+                        h1.admin__heading-title.home__title Логи
+                        .home__breadcrumb 
+                            a(href="#!").home__breadcrumb-item
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2.66406" y="1.99744" width="10.6711" height="12.005" rx="1.33333" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.3338 8L10.666 9.33389" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M13.3338 10.6678L10.666 12.0017" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.666 14.0024V7.49039C10.666 6.98505 10.9516 6.52311 11.4037 6.29722L13.3338 5.33215" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.99805 4.66526H3.99888" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.99805 7.33311H3.99888" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.99805 10.0008H3.99888" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                span Логи
+                    .payouts.scroll-detect-class 
+                        .payouts__content.scroll-detect 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                            +logs-item 
+                    include ../../components/pagination 
+                    +pagination 
+
+        script(src="../js/app.min.js")

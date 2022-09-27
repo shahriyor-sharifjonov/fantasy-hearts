@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../css/style.min.css?_v=20220927053827"/>
+    <link rel="stylesheet" href="../css/style.min.css?_v=20220927155634"/>
     <title>Главная </title>
   </head>
   <body> 
@@ -27,14 +27,25 @@
 <path d="M11 19H21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M6.41375 10.586C7.19475 11.367 7.19475 12.633 6.41375 13.414C5.63275 14.195 4.36675 14.195 3.58575 13.414C2.80475 12.633 2.80475 11.367 3.58575 10.586C4.36675 9.80499 5.63275 9.80499 6.41375 10.586" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M6.41375 17.586C7.19475 18.367 7.19475 19.633 6.41375 20.414C5.63275 21.195 4.36675 21.195 3.58575 20.414C2.80475 19.633 2.80475 18.367 3.58575 17.586C4.36675 16.805 5.63275 16.805 6.41375 17.586" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg><span>Выплаты</span></a>
+</svg><span>Выплаты</span></a><a class="sidebar__link" href="logs.html">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.4">
+<rect x="3.99609" y="2.99625" width="16.0067" height="18.0075" rx="2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.0017 12L16 14.0008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.0017 16.0016L16 18.0025" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 21.0037V11.2357C16 10.4777 16.4284 9.78475 17.1065 9.44592L20.0017 7.99832" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.99609 6.99792H5.99734" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.99609 10.9996H5.99734" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.99609 15.0012H5.99734" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg><span>Логи</span></a>
                 </div>
               </div>
             </div>
       <div class="home h-100">
                         <div class="popup" id="tech-popup">
                           <div class="popup-bg popup-close"></div>
-                          <div class="popup__content">
+                          <div class="popup__content"> 
                             <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
@@ -56,9 +67,30 @@
                             </form>
                           </div>
                         </div>
+                        <div class="popup" id="request-cancel">
+                          <div class="popup-bg popup-close"></div>
+                          <div class="popup__content"> 
+                            <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                            </button>
+                            <form class="popup__form" action="#"> 
+                              <h2 class="popup__title">Отклонение запроса</h2>
+                              <div class="popup__inner">
+                                <div class="popup__track">
+                                  <p class="popup__p">Укажите причину отклонения</p>
+                                  <div class="auth__step-input"> 
+                                    <textarea class="enable-submit input popup__textarea" placeholder="Комментарий" data-button="#popup-button-1"></textarea>
+                                  </div>
+                                  <button class="popup__btn" type="submit" disabled="disabled" id="popup-button-1">Отклонить запрос</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
                         <div class="popup" id="add-traffic-popup">
                           <div class="popup-bg popup-close"></div>
-                          <div class="popup__content">
+                          <div class="popup__content"> 
                             <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
@@ -101,6 +133,23 @@
                             </div>
                           </div>
                         </div>
+                        <div class="popup" id="request-success">
+                          <div class="popup-bg popup-close"></div>
+                          <div class="popup__content">
+                            <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                            </button>
+                            <div class="popup__cen"> 
+                              <div class="popup__icon"><svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle opacity="0.2" cx="44" cy="44" r="44" fill="#24B09C"/>
+<path d="M26 44L39.5 57L62 31" stroke="#24B09C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                              </div>
+                              <h2 class="popup__title">Запрос принят</h2>
+                            </div>
+                          </div>
+                        </div>
                 <div class="theme__header partner-header"> 
                   <div class="theme__header-menu"> 
                     <div class="theme__header-menu-top container"> <a class="theme__header-menu-link" href="partners.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,7 +171,15 @@
 <path d="M6.41375 10.586C7.19475 11.367 7.19475 12.633 6.41375 13.414C5.63275 14.195 4.36675 14.195 3.58575 13.414C2.80475 12.633 2.80475 11.367 3.58575 10.586C4.36675 9.80499 5.63275 9.80499 6.41375 10.586" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M6.41375 17.586C7.19475 18.367 7.19475 19.633 6.41375 20.414C5.63275 21.195 4.36675 21.195 3.58575 20.414C2.80475 19.633 2.80475 18.367 3.58575 17.586C4.36675 16.805 5.63275 16.805 6.41375 17.586" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
-</svg><span>Выплаты</span></a>
+</svg><span>Выплаты</span></a><a class="theme__header-menu-link" href="logs.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="3.99609" y="2.99622" width="16.0067" height="18.0075" rx="2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.0017 12L16 14.0008" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.0017 16.0017L16 18.0025" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 21.0037V11.2356C16 10.4776 16.4284 9.78472 17.1065 9.44589L20.0017 7.99829" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.99609 6.99789H5.99734" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.99609 10.9996H5.99734" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.99609 15.0012H5.99734" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg><span>Логи</span></a>
                     </div>
                     <div class="theme__header-menu-bot container"> <a class="theme__header-menu-link" href="#!">
                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -130,7 +187,7 @@
 <path d="M13.5 21L15.167 17.667H19.334C20.254 17.667 21 16.92 21 16V7.667C21 6.746 20.254 6 19.333 6H7.667C6.746 6 6 6.746 6 7.667V16C6 16.92 6.746 17.667 7.667 17.667H11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10 10H17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10 14H14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg><span>Написать в техподдержку</span></a><a class="theme__header-menu-link" href="#!">
+</svg><span>Написать в техподдержку </span></a><a class="theme__header-menu-link" href="#!">
                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.99867 3.9967H5.24752C4.65048 3.99654 4.07785 4.23364 3.65568 4.6558C3.23351 5.07797 2.99641 5.6506 2.99658 6.24764V17.7524C2.99642 18.3495 3.23352 18.9221 3.65568 19.3443C4.07785 19.7664 4.65048 20.0035 5.24752 20.0034H7.99867" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6105 20.9497L19.2379 19.7072C20.2694 19.4797 21.0039 18.5655 21.0037 17.5092V6.49076C21.0039 5.43447 20.2694 4.52023 19.2379 4.29276L13.6105 3.05024C12.9444 2.90301 12.2474 3.06594 11.7155 3.49322C11.1836 3.9205 10.8743 4.566 10.8745 5.24825V18.7528C10.8745 19.4349 11.184 20.0801 11.7158 20.5071C12.2477 20.9342 12.9445 21.097 13.6105 20.9497Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -177,7 +234,7 @@
 <path d="M4.27583 11.724C4.7965 12.2447 4.7965 13.0887 4.27583 13.6093C3.75517 14.13 2.91117 14.13 2.3905 13.6093C1.86983 13.0887 1.86983 12.2447 2.3905 11.724C2.91117 11.2033 3.75517 11.2033 4.27583 11.724" stroke="#0E322F" stroke-linecap="round" stroke-linejoin="round"/>
 </svg><span>Список выплат</span></a></div>
           </div>
-          <div class="payouts"> 
+          <div class="payouts scroll-detect-class"> 
             <div class="payouts__top"> 
               <p class="payouts__title payouts__title_dark payouts_1">Дата  и время вывода</p>
               <p class="payouts__title payouts__title_dark payouts_2">ID партнера</p>
@@ -187,7 +244,7 @@
                 <p class="payouts__title payouts_5">Статус</p>
               </div>
             </div>
-            <div class="payouts__content">
+            <div class="payouts__content scroll-detect"> 
               <div class="payouts__item"> 
                 <div class="payouts__left"> 
                   <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
@@ -440,15 +497,169 @@
                 </div>
                 <div class="payouts__right"> 
                   <div class="payouts_5"> 
-                    <button class="payouts__btn bg-green" type="button">Оплачено    </button>
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
+                  </div>
+                </div>
+              </div>
+              <div class="payouts__item"> 
+                <div class="payouts__left"> 
+                  <p class="payouts__p payouts_1">12.10.2022, 12:21:05</p>
+                  <p class="payouts__p payouts_2">123532</p>
+                  <p class="payouts__p payouts_3">1 600 ₽    </p>
+                </div>
+                <div class="payouts__right"> 
+                  <div class="payouts_5"> 
+                    <button class="payouts__btn bg-green" type="button">Оплачено </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+                    <div class="pagination"> 
+                      <div class="pagination__container"> 
+                        <p class="pagination__p">Показано: <b>25</b> из 220</p>
+                        <div class="pagination__content"> <a class="pagination__prev disabled" href="#!"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99805 9.00003L0.998047 5.00003L4.99805 1.00003" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a><a class="pagination__btn active" href="#!">1 </a><a class="pagination__btn" href="#!">2 </a><a class="pagination__btn" href="#!">3 </a><a class="pagination__btn" href="#!">4 </a><a class="pagination__btn" href="#!">5 </a><a class="pagination__btn" href="#!">... </a><a class="pagination__btn" href="#!">43 </a><a class="pagination__btn" href="#!">44 </a><a class="pagination__btn" href="#!">45 </a><a class="pagination__next" href="#!"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 1L5 5L1 9" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a></div>
+                      </div>
+                    </div>
         </div>
       </div>
     </div>
-    <script src="../js/app.min.js?_v=20220927053827"></script>
+    <script src="../js/app.min.js?_v=20220927155634"></script>
   </body>
 </html>

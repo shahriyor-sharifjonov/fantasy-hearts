@@ -650,7 +650,10 @@ input[type="checkbox"]{
         height: calc(100% - 102px);
         flex: 0 1 auto;
         @include media(576){
-            height: calc(100% - 155px);
+            height: calc(100% - 160px);
+        }
+        @include media(360){
+            height: calc(100% - 200px);
         }
     }
     .users__inner{
@@ -794,6 +797,9 @@ input[type="checkbox"]{
 .pagination{
     padding-top: 24px;
     height: 48px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
     @include media(576){
         height: 88px;
         padding-top: 16px;
@@ -852,5 +858,25 @@ input[type="checkbox"]{
         &.disabled{
             opacity: 0.5;
         }
+    }
+}
+
+.log{
+    padding: 20px 24px 16px 24px;
+    border-bottom: 1px solid #E1E1E1;
+    &__data{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #168A80;
+        margin-bottom: 4px;
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.02em;
+        color: #000000;        
     }
 }
