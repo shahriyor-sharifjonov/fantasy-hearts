@@ -366,7 +366,6 @@ if(document.querySelector('.chat__list-content')){
   document.querySelector('.chat__list-content').addEventListener('scroll', () => {
     const content = document.querySelector('.chat__list-content')
     const list = document.querySelector('.chat__list')
-    console.log(content.scrollHeight,  ' + ', content.scrollTop + content.offsetHeight);
     if ((content.scrollTop + content.offsetHeight) >= content.scrollHeight){
       list.classList.add('scrolled')
     }else{

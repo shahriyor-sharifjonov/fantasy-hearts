@@ -104,7 +104,7 @@
             height: 100%;
             background: linear-gradient(0deg, #FFFFFF 81.67%, rgba(255, 255, 255, 0) 100%);
         }
-        @include media(768){
+        @include media(992){
             width: 100%;
         }
         @include media(576){
@@ -113,7 +113,7 @@
             margin-left: 15px;
         }
         &.hide-md{
-            @include media(768){
+            @include media(992){
                 display: none;
             }
         }
@@ -233,18 +233,22 @@
         flex: 1 1 auto;
         background: #E0EEED;
         border-radius: 0 20px 20px 0;
-        @include media(768){
+        width: 100%;
+        @include media(992){
             border-radius: 20px;
         }
         &.hide-md{
-            @include media(768){
+            @include media(992){
                 display: none;
             }
         }
     }
     &__messages{
-        height: calc(100% - 56px);
-        padding: 32px 8px 32px 24px;
+        height: calc(100% - 117px);
+        padding: 32px 8px 16px 24px;
+        @include media(1450){
+            height: calc(100% - 156px);
+        }
         &-inner{
             padding-right: 16px;
             height: 100%;
@@ -253,6 +257,58 @@
             flex-direction: column;
             row-gap: 34px;
             align-items: flex-start;
+        }
+    }
+    &__action{
+        height: 61px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 32px 18px 32px;
+        @include media(1450){
+            height: 100px;
+            flex-direction: column;
+            width: 100%;
+            align-items: flex-start;    
+            padding: 0 32px 13px 32px;
+        }
+        p{
+            margin-right: 24px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: -0.02em;
+            color: #0E322F;
+            opacity: 0.8;
+            @include media(1450){
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+        }
+        &-content{
+            @include media(1450){
+                width: 100%;
+                overflow-x: auto;
+                overflow-y: hidden;
+                padding-bottom: 5px;
+            }
+        }
+        &-wrap{
+            display: flex;
+            justify-content: flex-start;
+            gap: 4px;
+            width: max-content;
+        }
+        &-btn{
+            padding: 12px 16px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            background: #FFFFFF;
+            border: 1px solid rgba(14, 50, 47, 0.2);
+            border-radius: 12px;
+            letter-spacing: 0.02em;
+            color: #0E322F;
         }
     }
     &__mess{

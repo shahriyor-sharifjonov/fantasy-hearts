@@ -142,6 +142,15 @@ html(lang="en")
                                         .chat__mess.my-mess 
                                             p.chat__mess-p Здравствуйте, укажите новый адрес целиком. Страна, индекс, город, улица, дом
                                             p.chat__mess-data 7 июня в 19:31:03
+                                .chat__action 
+                                    p Действия с обращением:
+                                    .chat__action-content 
+                                        .chat__action-wrap
+                                            button(type="submit").chat__action-btn Применить и закрыть
+                                            button(type="submit").chat__action-btn Закрыть
+                                            button(type="submit").chat__action-btn Отклонить
+                                            button(type="submit").chat__action-btn В архив
+
                                 form(action="#").chat__form 
                                     input(type="text" placeholder="Сообщение...").chat__form-input
                                     button(type="submit").chat__form-btn 
