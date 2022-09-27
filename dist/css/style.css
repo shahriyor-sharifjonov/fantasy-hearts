@@ -4424,6 +4424,74 @@
   height: 100%;
 }
 
+.popup__request {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 55px;
+}
+
+.popup__request:not(:last-child) {
+  border-bottom: 1px solid #0E322F20;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.popup__request .auth__step-input {
+  margin-bottom: 0 !important;
+}
+
+.popup__request-left {
+  width: 120px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #0E322F;
+  opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 4px;
+  padding-top: 16px;
+}
+
+.popup__request-left button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup__request-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .popup.active {
   opacity: 1;
   visibility: visible;
@@ -4431,7 +4499,7 @@
 
 .popup__content {
   background: #FFFFFF;
-  padding: 32px;
+  padding: 32px 7px 32px 32px;
   max-width: 510px;
   border-radius: 20px;
   position: relative;
@@ -4500,6 +4568,7 @@
 
 .popup__track {
   width: 100%;
+  padding-right: 25px;
 }
 
 .popup-close-btn {
@@ -4603,6 +4672,56 @@
   height: 140px;
   max-height: 310px;
   min-height: 140px;
+}
+
+.popup__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.popup__footer button[type=submit] {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 17px 24px;
+  margin-right: 32px;
+}
+
+.popup__footer .popup__add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #168A80;
+}
+
+.registerRequestResult .auth__step-input:first-child {
+  margin-top: 24px;
+}
+
+.registerRequestResult .auth__step-input:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+
+.registerRequest .select-items {
+  max-height: 100px;
 }
 
 .admin__heading {
@@ -7214,6 +7333,17 @@ input[type=checkbox]:checked {
   .home__fixed-buttons_2 span {
     font-size: 14px;
     line-height: 14px;
+  }
+
+  .popup__request {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    gap: 4px;
   }
 
   .admin__heading-btn {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../css/style.min.css?_v=20220927155634"/>
+    <link rel="stylesheet" href="../css/style.min.css?_v=20220927191635"/>
     <title>Главная </title>
   </head>
   <body> 
@@ -67,27 +67,6 @@
                             </form>
                           </div>
                         </div>
-                        <div class="popup" id="request-cancel">
-                          <div class="popup-bg popup-close"></div>
-                          <div class="popup__content"> 
-                            <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-                            </button>
-                            <form class="popup__form" action="#"> 
-                              <h2 class="popup__title">Отклонение запроса</h2>
-                              <div class="popup__inner">
-                                <div class="popup__track">
-                                  <p class="popup__p">Укажите причину отклонения</p>
-                                  <div class="auth__step-input"> 
-                                    <textarea class="enable-submit input popup__textarea" placeholder="Комментарий" data-button="#popup-button-1"></textarea>
-                                  </div>
-                                  <button class="popup__btn" type="submit" disabled="disabled" id="popup-button-1">Отклонить запрос</button>
-                                </div>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
                         <div class="popup" id="add-traffic-popup">
                           <div class="popup-bg popup-close"></div>
                           <div class="popup__content"> 
@@ -109,8 +88,8 @@
                                   <div class="auth__step-input"> 
                                     <textarea class="enable-submit input popup__textarea" placeholder="Описание способа привлечения игроков" data-button="#popup-button-2"></textarea>
                                   </div>
+                                  <button class="popup__btn" type="submit" disabled="disabled" id="popup-button-2">Отправить запрос</button>
                                 </div>
-                                <button class="popup__btn" type="submit" disabled="disabled" id="popup-button-2">Отправить запрос</button>
                               </div>
                             </form>
                           </div>
@@ -148,6 +127,86 @@
                               </div>
                               <h2 class="popup__title">Запрос принят</h2>
                             </div>
+                          </div>
+                        </div>
+                        <div class="popup" id="request-cancel">
+                          <div class="popup-bg popup-close"></div>
+                          <div class="popup__content"> 
+                            <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                            </button>
+                            <form class="popup__form" action="#"> 
+                              <h2 class="popup__title">Отклонение запроса</h2>
+                              <div class="popup__inner">
+                                <div class="popup__track">
+                                  <p class="popup__p">Укажите причину отклонения</p>
+                                  <div class="auth__step-input"> 
+                                    <textarea class="enable-submit input popup__textarea" placeholder="Комментарий" data-button="#popup-button-request-cancel"></textarea>
+                                  </div>
+                                  <button class="popup__btn" type="submit" disabled="disabled" id="popup-button-request-cancel">Отклонить запрос</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="popup" id="request-popup"> 
+                          <div class="popup-bg popup-close"></div>
+                          <div class="popup__content"> 
+                            <button class="popup-close popup-close-btn" type="button"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 10L22 22M22 10L10 22" stroke="#8A8A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                            </button>
+                            <form class="popup__form" action="#"> 
+                              <h2 class="popup__title">Запросить редактирование данных</h2>
+                              <div class="popup__inner">
+                                <div class="popup__track">
+                                  <p class="popup__p">Вы может отправить запрос на редактирование данных в техподдержку и сразу после модерации мы поменяем данные профиля. <br><br>В одном запросе можно изменить только один тип данных.</p>
+                                  <div class="popup__requests"> 
+                                    <div class="popup__request"> 
+                                      <div class="popup__request-left"> <span>Запрос №1 </span><button type="button">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.4">
+<path d="M5 7H19" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18 7V18C18 19.105 17.105 20 16 20H8C6.895 20 6 19.105 6 18V7" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 3.75H9" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+</button>
+                                      </div>
+                                      <div class="popup__request-content"> 
+                                        <div class="custom-select registerRequest">
+                                          <select>
+                                            <option value="0">Выберите тип данных</option>
+                                            <option value="1">ФИО</option>
+                                            <option value="2">Телефон</option>
+                                            <option value="3">Email</option>
+                                            <option value="4">Telegram</option>
+                                            <option value="5">Пароль</option>
+                                            <option value="6">Страна проживания</option>
+                                            <option value="7">Индекс</option>
+                                            <option value="8">Город</option>
+                                            <option value="9">Адрес</option>
+                                          </select>
+                                        </div>
+                                        <div class="registerRequestResult"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="popup__footer">    
+                                    <button class="popup__btn" type="submit" disabled="disabled" id="popup-button-request">Отправить запрос </button>
+                                    <button class="popup__add" type="button">
+                                       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="7" width="2" height="16" fill="#168A80"/>
+<rect y="7" width="16" height="2" fill="#168A80"/>
+</svg> Добавить ещё 
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
                           </div>
                         </div>
                 <div class="theme__header partner-header"> 
@@ -660,6 +719,6 @@
         </div>
       </div>
     </div>
-    <script src="../js/app.min.js?_v=20220927155634"></script>
+    <script src="../js/app.min.js?_v=20220927191635"></script>
   </body>
 </html>

@@ -44,13 +44,55 @@
         align-items: flex-end;
         padding: 15px 0 0 0;
     }
+    &__request{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 55px;
+        @include media(576){
+            flex-direction: column;
+            align-items: stretch;
+            gap: 4px;
+        }
+        &:not(:last-child){
+            border-bottom: 1px solid #0E322F20;
+            padding-bottom: 24px;
+            margin-bottom: 24px;
+        }
+        .auth__step-input{
+            margin-bottom: 0 !important;
+        }
+        &-left{
+            width: 120px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: #0E322F;
+            opacity: 0.6;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 4px;
+            padding-top: 16px;
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &-content{
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+        }
+    }
     &.active{
         opacity: 1;
         visibility: visible;
     }
     &__content{
         background: #FFFFFF;
-        padding: 32px;
+        padding: 32px 7px 32px 32px;
         max-width: 510px;
         border-radius: 20px;
         position: relative;
@@ -96,6 +138,7 @@
     }
     &__track{
         width: 100%;
+        padding-right: 25px;
     }
     &-close-btn{
         position: absolute;
@@ -166,5 +209,42 @@
         height: 140px;
         max-height: 310px;
         min-height: 140px;
+    }
+    &__footer{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        button[type="submit"]{
+            width: max-content;
+            padding: 17px 24px;
+            margin-right: 32px;
+        }
+        .popup__add{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.02em;
+            color: #168A80;
+        }
+    }
+}
+
+.registerRequest {
+    &Result{
+        .auth__step-input{
+            &:first-child{
+                margin-top: 24px;
+            }
+            &:not(:last-of-type){
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .select-items{
+        max-height: 100px;
     }
 }

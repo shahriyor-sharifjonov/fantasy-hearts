@@ -157,44 +157,46 @@ const customSelect = () => {
   for (i = 0; i < l; i++) {
     selElmnt = x[i].getElementsByTagName("select")[0];
     ll = selElmnt.length;
-    a = document.createElement("DIV");
-    a.setAttribute("class", "select-selected");
-    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-    x[i].appendChild(a);
-    b = document.createElement("DIV");
-    b.setAttribute("class", "select-items select-hide");
-    for (j = 1; j < ll; j++) {
-      c = document.createElement("DIV");
-      c.innerHTML = selElmnt.options[j].innerHTML;
-      c.addEventListener("click", function(e) {
-          var y, i, k, s, h, sl, yl;
-          s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-          sl = s.length;
-          h = this.parentNode.previousSibling;
-          for (i = 0; i < sl; i++) {
-            if (s.options[i].innerHTML == this.innerHTML) {
-              s.selectedIndex = i;
-              h.innerHTML = this.innerHTML;
-              y = this.parentNode.getElementsByClassName("same-as-selected");
-              yl = y.length;
-              for (k = 0; k < yl; k++) {
-                y[k].removeAttribute("class");
+    if(!x[i].querySelector('.select-selected')){
+      a = document.createElement("DIV");
+      a.setAttribute("class", "select-selected");
+      a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+      x[i].appendChild(a);
+      b = document.createElement("DIV");
+      b.setAttribute("class", "select-items select-hide");
+      for (j = 1; j < ll; j++) {
+        c = document.createElement("DIV");
+        c.innerHTML = selElmnt.options[j].innerHTML;
+        c.addEventListener("click", function(e) {
+            var y, i, k, s, h, sl, yl;
+            s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+            sl = s.length;
+            h = this.parentNode.previousSibling;
+            for (i = 0; i < sl; i++) {
+              if (s.options[i].innerHTML == this.innerHTML) {
+                s.selectedIndex = i;
+                h.innerHTML = this.innerHTML;
+                y = this.parentNode.getElementsByClassName("same-as-selected");
+                yl = y.length;
+                for (k = 0; k < yl; k++) {
+                  y[k].removeAttribute("class");
+                }
+                this.setAttribute("class", "same-as-selected");
+                break;
               }
-              this.setAttribute("class", "same-as-selected");
-              break;
             }
-          }
-          h.click();
+            h.click();
+        });
+        b.appendChild(c);
+      }
+      x[i].appendChild(b);
+      a.addEventListener("click", function(e) {
+        e.stopPropagation();
+        closeAllSelect(this);
+        this.nextSibling.classList.toggle("select-hide");
+        this.classList.toggle("select-arrow-active");
       });
-      b.appendChild(c);
     }
-    x[i].appendChild(b);
-    a.addEventListener("click", function(e) {
-      e.stopPropagation();
-      closeAllSelect(this);
-      this.nextSibling.classList.toggle("select-hide");
-      this.classList.toggle("select-arrow-active");
-    });
   }
   
   function closeAllSelect(elmnt) {
@@ -219,6 +221,7 @@ const customSelect = () => {
 
   document.addEventListener("click", closeAllSelect);
 }
+
 
 const registerCurrency = () => {
   const selects = document.querySelectorAll('#registerCurrency .select-items div');
@@ -359,6 +362,154 @@ const registerCurrency = () => {
         `;
       }
     })
+  })
+}
+
+const registerRequest = () => {
+  const items = document.querySelectorAll('.popup__request');
+  items.forEach(el => {
+    const selects = el.querySelectorAll('.select-items div');
+    const result = el.querySelector('.registerRequestResult')
+    selects.forEach(select => {
+      select.addEventListener('click', () => {
+        if(select.innerHTML === 'ФИО'){
+          result.innerHTML = ''
+          result.innerHTML = `
+            <div class="auth__step-input">
+              <input type="text" class="input enable-submit" data-button="#popup-button-request" placeholder="Введите новые данные ФИО">
+            </div>
+          `
+        } else if(select.innerHTML === 'Телефон'){
+          result.innerHTML = ''
+          result.innerHTML = `
+            <div class="auth__step-input">
+              <input type="text" class="input enable-submit" data-button="#popup-button-request" placeholder="Введите новый телефон">
+            </div>
+          `
+        } else if(select.innerHTML === 'Email'){
+          result.innerHTML = ''
+          result.innerHTML = `
+            <div class="auth__step-input">
+              <input type="text" class="input enable-submit" data-button="#popup-button-request" placeholder="Введите новый Email">
+            </div>
+          `
+        } else if(select.innerHTML === 'Telegram'){
+          result.innerHTML = ''
+          result.innerHTML = `
+            <div class="auth__step-input">
+              <input type="text" class="input enable-submit" data-button="#popup-button-request" placeholder="Введите новый Telegram">
+            </div>
+          `
+        } else if(select.innerHTML === 'Пароль'){
+          result.innerHTML = ''
+          result.innerHTML = `
+            <div class="auth__step-input">
+              <input type="text" class="input enable-submit" data-button="#popup-button-request" placeholder="Введите новый Пароль">
+            </div>
+          `
+        } else if(select.innerHTML === 'Страна проживания'){
+          result.innerHTML = ''
+          result.innerHTML = `
+            <div class="auth__step-input">
+              <input type="text" class="input enable-submit" data-button="#popup-button-request" placeholder="Введите новый Страна проживания">
+            </div>
+          `
+        } else if(select.innerHTML === 'Индекс'){
+          result.innerHTML = ''
+          result.innerHTML = `
+            <div class="auth__step-input">
+              <input type="text" class="input enable-submit" data-button="#popup-button-request" placeholder="Введите новый Индекс">
+            </div>
+          `
+        } else if(select.innerHTML === 'Город'){
+          result.innerHTML = ''
+          result.innerHTML = `
+            <div class="auth__step-input">
+              <input type="text" class="input enable-submit" data-button="#popup-button-request" placeholder="Введите новый Город">
+            </div>
+          `
+        } else if(select.innerHTML === 'Адрес'){
+          result.innerHTML = ''
+          result.innerHTML = `
+            <div class="auth__step-input">
+              <input type="text" class="input enable-submit" data-button="#popup-button-request" placeholder="Введите новый Адрес">
+            </div>
+          `
+        }
+        enableSubmit()
+      })
+    })
+  })
+  
+}
+
+const registerDeleteRequest = () => {
+  let reqs = document.querySelectorAll('.popup__request');
+  reqs.forEach(req => {
+    const btn = req.querySelector('.popup__request-left button')
+    btn.addEventListener('click', () => {
+      req.remove()
+      reqs = document.querySelectorAll('.popup__request');
+      reqs.forEach((el, index) => {
+        const num = el.querySelector('.popup__request-left span')
+        num.innerHTML=`Запрос №${index+=1}`
+      })
+    })
+  })
+}
+
+const registerAddRequest = () => {
+  let requests = document.querySelector('.popup__requests');
+  let requestItems = document.querySelectorAll('.popup__request');
+  const updateEls = () => {
+    requests = document.querySelector('.popup__requests');
+    requestItems = document.querySelectorAll('.popup__request');
+  }
+  const btn = document.querySelector('.popup__add');
+  btn.addEventListener('click', () => {
+    updateEls()
+    const num = requestItems.length+1;
+    const newReq = document.createElement('div');
+    newReq.classList.add('popup__request')
+    newReq.innerHTML = `
+      <div class="popup__request-left">
+        <span>Запрос №${num}</span>
+        <button type="button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.4">
+          <path d="M5 7H19" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M18 7V18C18 19.105 17.105 20 16 20H8C6.895 20 6 19.105 6 18V7" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M15 3.75H9" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M10 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M14 11V16" stroke="#0E322F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </g>
+          </svg>
+        </button>
+      </div>
+      <div class="popup__request-content"> 
+        <div class="custom-select registerRequest">
+          <select>
+            <option value="0">Выберите тип данных</option>
+            <option value="1">ФИО</option>
+            <option value="2">Телефон</option>
+            <option value="3">Email</option>
+            <option value="4">Telegram</option>
+            <option value="5">Пароль</option>
+            <option value="6">Страна проживания</option>
+            <option value="7">Индекс</option>
+            <option value="8">Город</option>
+            <option value="9">Адрес</option>
+          </select>
+      </div>
+    `
+    requests.append(newReq)
+    customSelect()
+    const content = newReq.querySelector('.popup__request-content')
+    const requestResult = document.createElement('div')
+    requestResult.classList.add('registerRequestResult')
+    content.append(requestResult)
+    registerRequest()
+    registerDeleteRequest()
   })
 }
 
@@ -709,6 +860,9 @@ window.onload = () => {
   customSelect();
   accordion();
   themeHeader();
+  registerRequest();
+  registerAddRequest();
+  registerDeleteRequest();
   if(document.querySelector('.theme__header-notification-btn')){
     notification();
   }
