@@ -1,0 +1,22 @@
+mixin pagination()
+    .pagination 
+        .pagination__container 
+            p.pagination__p Показано: <b>25</b> из 220
+            .pagination__content 
+                a(href="#!").pagination__prev.disabled
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.99805 9.00003L0.998047 5.00003L4.99805 1.00003" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                a(href="#!").pagination__btn.active 1 
+                a(href="#!").pagination__btn 2 
+                a(href="#!").pagination__btn 3 
+                a(href="#!").pagination__btn 4 
+                a(href="#!").pagination__btn 5 
+                a(href="#!").pagination__btn ... 
+                a(href="#!").pagination__btn 43 
+                a(href="#!").pagination__btn 44 
+                a(href="#!").pagination__btn 45 
+                a(href="#!").pagination__next
+                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L5 5L1 9" stroke="#323232" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>

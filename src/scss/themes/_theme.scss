@@ -595,7 +595,7 @@ input[type="checkbox"]{
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding: 15px 32px 56px 32px;
+        padding: 15px 32px 32px 32px;
         @include media(1200){
             padding: 20px 15px 56px 15px;
         }
@@ -647,9 +647,10 @@ input[type="checkbox"]{
         height: calc(100vh - 209px);
     }
     .users__wrapper{
-        height: calc(100% - 54px);
-        @include media(360){
-            height: calc(100% - 82px);
+        height: calc(100% - 102px);
+        flex: 0 1 auto;
+        @include media(576){
+            height: calc(100% - 155px);
         }
     }
     .users__inner{
@@ -787,6 +788,69 @@ input[type="checkbox"]{
         @include media(1200){
             display: block;
             margin-bottom: 24px;
+        }
+    }
+}
+.pagination{
+    padding-top: 24px;
+    height: 48px;
+    @include media(576){
+        height: 88px;
+        padding-top: 16px;
+    }
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        @include media(576){
+            flex-direction: column;
+        }
+    }
+    &__p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: #0E322F;
+        opacity: 0.8;
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+    }
+    &__btn{
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        transition: 300ms ease-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 20px;
+        color: #1D1D1D70;
+        text-align: center;
+        letter-spacing: -0.02em;
+        &.active{
+            background: #0E322F;
+            color: #FFFFFF;
+        }
+        &:hover{
+            background: #E0EEED;
+        }
+    }
+    &__next,
+    &__prev{
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &.disabled{
+            opacity: 0.5;
         }
     }
 }

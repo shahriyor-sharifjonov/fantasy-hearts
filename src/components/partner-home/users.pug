@@ -25,6 +25,35 @@ mixin partner-item()
             a(href="edit.html") Константинопольский Константин Константинович
         .users__item.partners__item_2
             p 123521
+        .users__item.partners__item_8
+            p.inactive На паузе
+        .users__item.partners__item_3
+            p Aoket68
+        .users__item.partners__item_4
+            p artspace68@yandex.ru
+        .users__item.partners__item_5
+            p —
+        .users__item.partners__item_6
+            p —
+        .users__item.partners__item_7
+            p —
+        .users__item.partners__item_8
+            p A
+        .users__item.partners__item_9
+            p 43
+        .users__item.partners__item_10
+            p 14:21:22
+
+mixin inactive-partner-item()
+    .users__row.partners__item-row 
+        .users__item.partners__item_1
+            input(type="checkbox").checkbox
+            div.bg 
+            a(href="edit.html") Константинопольский Константин Константинович
+        .users__item.partners__item_2
+            p 123521
+        .users__item.partners__item_8
+            p.active Активен
         .users__item.partners__item_3
             p Aoket68
         .users__item.partners__item_4
@@ -131,6 +160,10 @@ mixin partners()
                             button(type="button").users__header-btn 
                                 +filter-svg
                                 p ID
+                        .users__header-item.partners__item_8
+                            button(type="button").users__header-btn 
+                                +filter-svg
+                                p Статус
                         .users__header-item.partners__item_3
                             button(type="button").users__header-btn
                                 +filter-svg
@@ -164,23 +197,25 @@ mixin partners()
                                 +filter-svg
                                 p Время
                     .users__list 
+                        +inactive-partner-item()
                         +partner-item()
                         +partner-item()
                         +partner-item()
-                        +partner-item()
-                        +partner-item()
-                        +partner-item() 
-                        +partner-item()
-                        +partner-item()
-                        +partner-item()
-                        +partner-item()
-                        +partner-item()
-                        +partner-item()
-                        +partner-item()
-                        +partner-item()
+                        +inactive-partner-item()
+                        +inactive-partner-item() 
+                        +inactive-partner-item()
+                        +inactive-partner-item()
                         +partner-item()
                         +partner-item()
                         +partner-item()
                         +partner-item()
                         +partner-item()
                         +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+                        +partner-item()
+        include ../pagination
+        +pagination 
